@@ -4,15 +4,28 @@
   | default @import url()
   |============================
 */
-/* Common styles */
+body {
+  background-color: gold;
+}
+@import 'node_modules/modern-normalize/modern-normalize.css';
 @import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
-
-/* Sections style */
+@import url('./general.css');
+/* Header */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+/* Hero */
+@import url('./hero.css');
+/* About-me */
+@import url('./about-me.css');
+/* Benefits */
+@import url('./benefits.css');
+
+/* Projects */
+@import url('./projects.css');
+/* FAQ */
+@import url('./faq.css');
+/* Covers */
+@import url('./covers.css');
+/* Reviews */
+@import url('./reviews.css');
+/* Work Together */
+@import url('./work-together.css');

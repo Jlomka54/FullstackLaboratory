@@ -1,0 +1,128 @@
+:root {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: 'Inter Tight', sans-serif;
+  overflow-x: hidden;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* =======================
+Utils
+========================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-btn {
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--primary-text-hex);
+
+  border: 1px solid rgba(252, 249, 249, 0.1);
+  border-radius: 15px;
+  padding: 14px 36px;
+  min-width: 154px;
+  height: 49px;
+
+  transition: border var(--primary-transition);
+}
+
+.main-btn:hover,
+.main-btn:focus {
+  border: 1px solid #ecd979;
+}
+
+@media screen and (min-width: 768px) {
+  .main-btn {
+    font-size: 16px;
+
+    min-width: 168px;
+    height: 50px;
+  }
+}
+
+/* =======================
+Global
+========================== */
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 744px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1220px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+.section-padding {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.37;
+  letter-spacing: -0.03em;
+}
+
+.section-text {
+  font-size: 14px;
+  letter-spacing: -0.04em;
+  color: rgba(var(--primary-text-rgb), 0.4);
+}
+
+.brand-text-accent {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 44px;
+    line-height: 1.45;
+  }
+
+  .section-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-padding {
+    padding: 75px 0;
+  }
+}
