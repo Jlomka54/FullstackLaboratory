@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
   font-optical-sizing: auto;
   font-style: normal;
-  padding: 0 16px;
+
   background-color: #1c1d20;
 }
 
@@ -71,9 +71,10 @@ Global
 ========================== */
 
 .container {
-  min-width: 288px;
-  max-width: 343px;
-
+  background-color: red;
+  min-width: 320px;
+  max-width: 370px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -84,6 +85,7 @@ Global
 @media screen and (min-width: 768px) {
   .container {
     max-width: 704px;
+    padding: 0 32px;
   }
 
   .section-padding {
