@@ -72,19 +72,16 @@ Global
 
 .container {
   background-color: red;
-  min-width: 288px;
-  max-width: 343px;
+  min-width: 320px;
+  max-width: 370px;
   padding: 0 16px;
   margin: 0 auto;
-}
-
-.section-padding {
-  padding: 32px 0;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 704px;
+    padding: 0 32px;
   }
 
   .section-padding {
