@@ -4,9 +4,7 @@
   | default @import url()
   |============================
 */
-body {
-  background-color: gold;
-}
+
 @import 'node_modules/modern-normalize/modern-normalize.css';
 @import url('./reset.css');
 @import url('./general.css');

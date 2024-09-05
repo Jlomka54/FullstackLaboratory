@@ -1,12 +1,21 @@
 :root {
   scroll-behavior: smooth;
+
+  --basic-color-bt: #ed3b44;
+  --primary-text-hex: #fafafa;
+  --arrow-color-inactive: #3b3b3b;
+
+  --primary-transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 html,
 body {
+  color: var(--primary-text-hex);
   font-family: 'Inter Tight', sans-serif;
   overflow-x: hidden;
   font-optical-sizing: auto;
   font-style: normal;
+  padding: 0 16px;
+  background-color: #1c1d20;
 }
 
 /* =======================
@@ -30,27 +39,28 @@ Utils
 .main-btn {
   font-weight: 600;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
+
   color: var(--primary-text-hex);
+  border-radius: 60px;
 
-  border: 1px solid rgba(252, 249, 249, 0.1);
-  border-radius: 15px;
-  padding: 14px 36px;
-  min-width: 154px;
-  height: 49px;
+  width: 163px;
+  height: 55px;
+  border: none;
+  background-color: var(--basic-color-bt);
+  padding: 14px 31px;
 
-  transition: border var(--primary-transition);
+  transition: background-color var(--primary-transition);
 }
 
 .main-btn:hover,
 .main-btn:focus {
-  border: 1px solid #ecd979;
+  background-color: #bf3d44;
 }
 
 @media screen and (min-width: 768px) {
   .main-btn {
     font-size: 16px;
-
+    padding: 18px 24px;
     min-width: 168px;
     height: 50px;
   }
@@ -63,66 +73,51 @@ Global
 .container {
   min-width: 320px;
   max-width: 375px;
-  padding: 0 20px;
+
   margin: 0 auto;
+}
+
+.section-padding {
+  padding: 32px 0;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 744px;
+    max-width: 704px;
   }
-}
 
-@media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1220px;
+  .section-padding {
+    padding: 49px 0;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1280px;
+  body {
+    padding: 0 32px;
   }
-}
 
-.section-padding {
-  padding: 40px 0;
+  .container {
+    max-width: 1376px;
+  }
+
+  .section-padding {
+    padding: 82px 0;
+  }
 }
 
 .section-title {
   font-weight: 500;
-  font-size: 32px;
-  line-height: 1.37;
+  font-size: 90px;
+  line-height: 1;
   letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-hex);
 }
 
 .section-text {
-  font-size: 14px;
-  letter-spacing: -0.04em;
-  color: rgba(var(--primary-text-rgb), 0.4);
-}
-
-.brand-text-accent {
-  color: var(--accent-color);
-}
-
-@media screen and (min-width: 768px) {
-  .section-padding {
-    padding: 50px 0;
-  }
-
-  .section-title {
-    font-size: 44px;
-    line-height: 1.45;
-  }
-
-  .section-text {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .section-padding {
-    padding: 75px 0;
-  }
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--primary-text-hex);
 }
