@@ -71,7 +71,7 @@ Global
 ========================== */
 
 .container {
-  min-width: 320px;
+  min-width: 288px;
   max-width: 375px;
 
   margin: 0 auto;
