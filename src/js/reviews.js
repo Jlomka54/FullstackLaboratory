@@ -2,16 +2,28 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import axios from 'axios';
 
-const reviewEl = document.querySelector('.card-review');
+const reviewEl = document.querySelector('.swiper-review-wrapper');
 
 // -----class swiper-----//
 
-const swiper = new Swiper('.myReviewSwiper', {
-  slidesPerView: 4,
-  spaceBetween: 16,
+const swiper = new Swiper('.swiper-review', {
+  // Default parameters
+
+  slidesPerView: 1,
+  spaceBetween: 10,
   navigation: {
-    nextEl: '.review-slide-next',
-    prevEl: '.review-slide-back',
+    nextEl: '.review-swiper-button-next',
+    prevEl: '.review-swiper-button-prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
   },
 });
 
@@ -24,26 +36,20 @@ const fetchReview = () => {
 
 // -----render functions-----//
 
-const createReviewTemplate = imgInfo => {
+const createReviewTemplate = reviewCard => {
   return `
-  <li class="card-review-item">
-  <div class="swiper-slide swiper-slide-review">
-	<a class="review-link" href="${imgInfo.avatar_url}">
+  
+  <div class="swiper-slide swiper-review-slide">
+  <a class="review-link" href="${reviewCard.avatar_url}">
 		<img 
 			class="review-image" 
-			src="${imgInfo.avatar_url}" 
-			alt="${imgInfo.author}" 
+			src="${reviewCard.avatar_url}" 
+			alt="${reviewCard.author}" 
 			/>
 	</a>
-  <div class='review-wraper'>
-    <div>
-      <h4 class='review-title'>${imgInfo.author}</h4>
-      <p class='review-text'>${imgInfo.review}</p>
-    </div>
-    
-  </div>
-</li>
-
+      <h3 class="review-container-title">${reviewCard.author}</h3>
+      <p class="review-text">${reviewCard.review}</p>
+</div> 
   `;
 };
 
@@ -51,10 +57,9 @@ const createReviewTemplate = imgInfo => {
 const showReviews = async event => {
   try {
     const response = await fetchReview();
-    console.dir(response);
 
     const reviewCardsTemplate = response.data
-      .map(imgDetails => createReviewTemplate(imgDetails))
+      .map(reviewDetails => createReviewTemplate(reviewDetails))
       .join('');
     reviewEl.innerHTML = reviewCardsTemplate;
   } catch (err) {

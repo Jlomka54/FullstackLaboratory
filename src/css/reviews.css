@@ -1,34 +1,109 @@
-.review-title {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.myReviewSwiper {
-  width: 1376px;
-  margin: 20px 0;
+.container.container-style {
+  background: var(--arrow-color-inactive);
 }
 
-.swiper-wrapper.card-review {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.swiper-slide.swiper-slide-review {
-  text-align: left;
-  font-size: 18px;
+.swiper-slide.swiper-review-slide {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-  width: 332px;
+  width: 343px;
+  height: auto;
+}
+
+.review-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 32px;
 }
 
 .review-image {
   width: 48px;
   height: 48px;
-  object-fit: cover;
   margin-bottom: 32px;
 }
 
-.review-title {
+.review-container-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
   margin-bottom: 8px;
 }
+
+.review-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.swiper-button-prev.review-swiper-button-prev,
+.swiper-button-next.review-swiper-button-next {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  stroke: #3b3b3b;
+  &:hover,
+  &:focus,
+  &:disabled {
+    stroke: #fafafa;
+  }
+}
+
+.swiper-button-prev.review-swiper-button-prev {
+  position: relative;
+  left: 40%;
+}
+
+.swiper-button-next.review-swiper-button-next {
+  position: relative;
+  left: 60%;
+  bottom: 30px;
+}
+
+/* @media screen and (min-width: 768px) {
+  .review-section {
+   font-family: var(--font-family);
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.02em;
+color: rgba(250, 250, 250, 0.4);
+  }
+} */
+
+/* .swiper-review {
+}
+.swiper-review-wrapper {
+}
+.review-link {
+}
+.review-image {
+}
+.review-title {
+}
+.review-text {
+}
+
+.review-btn-wraper {
+}
+
+.review-swiper-button-prev.
+ .review-swiper-button-next {
+border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 60px;
+padding: 14px;
+width: 52px;
+height: 52px;
+}
+
+.review-swiper-button-next {
+} */
