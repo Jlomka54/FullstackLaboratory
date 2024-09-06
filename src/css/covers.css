@@ -8,6 +8,9 @@
     radial-gradient(circle 100px at 100% 80%, #ed3b4477, #ed3b4400);
   height: 508px;
   overflow: hidden;
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .covers-wrp {
@@ -70,6 +73,7 @@
 @media screen and (min-width: 768px) {
   .covers-container {
     height: 960px;
+    max-width: 768px;
   }
 
   .top-line,
@@ -106,5 +110,11 @@
     100% {
       transform: translateX(0);
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .covers-container {
+    max-width: 1440px;
   }
 }
