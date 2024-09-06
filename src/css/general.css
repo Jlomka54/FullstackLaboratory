@@ -77,6 +77,10 @@ Global
   margin: 0 auto;
 }
 
+.section-padding {
+  padding: 32px 0;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;

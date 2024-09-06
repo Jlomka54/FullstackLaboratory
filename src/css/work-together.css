@@ -1,0 +1,195 @@
+.wt-container {
+  padding: 32px 16px;
+  max-width: 375px;
+  background-color: #1c1d20;
+  background-image: url('../img/work-together/glass-bg-mob.png');
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../img/work-together/glass-bg-mob@2x.png');
+  }
+  background-repeat: no-repeat;
+  background-position: right;
+  @media screen and (min-width: 768px) {
+    padding-top: 85px;
+    padding-bottom: 168px;
+    max-width: 768px;
+    background-image: url('../img/work-together/glass-bg-tab.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../img/work-together/glass-bg-tab@2x.png');
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    padding-inline: 196px;
+    max-width: 1440px;
+    background-image: url('../img/work-together/glass-bg-desk.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../img/work-together/glass-bg-desk@2x.png');
+    }
+  }
+}
+.wt-tittle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 542px;
+}
+
+.wt-thumb {
+  position: absolute;
+  overflow: hidden;
+  width: 44px;
+  @media screen and (min-width: 768px) {
+    width: 70px;
+    border-radius: 24px;
+  }
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.wt-tittle {
+  font-weight: 500;
+  font-size: 40px;
+  text-indent: 52px;
+  @media screen and (min-width: 768px) {
+    font-size: 64px;
+    text-indent: 90px;
+  }
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 64px;
+}
+
+.wt-tittle::first-line {
+  padding-left: 40px;
+}
+
+.wt-tittle-col-accent {
+  color: var(--basic-color-bt);
+}
+
+.wt-tittle-h-accent {
+  line-height: 140%;
+}
+
+.wt-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wt-form {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wt-form {
+    justify-content: space-between;
+  }
+}
+
+.wt-input {
+  color: var(--primary-text-hex);
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  padding-bottom: 20px;
+  width: calc(100% - 32px);
+  @media screen and (min-width: 1440px) {
+    width: 390px;
+  }
+  height: 44px;
+  transition: border-color var(--primary-transition);
+}
+
+.wt-input:hover,
+.wt-input:focus {
+  outline: none;
+  border-color: rgba(250, 250, 250, 0.5);
+}
+
+.wt-btn {
+  color: var(--primary-text-hex);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  background-color: var(--basic-color-bt);
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  margin-bottom: 64px;
+  transition: background-color var(--primary-transition);
+  @media screen and (min-width: 768px) {
+    margin-bottom: 18px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.wt-btn:hover,
+.wt-btn:focus {
+  background-color: #e0373f;
+  border: none;
+}
+
+.wt-input::placeholder {
+  color: rgba(250, 250, 250, 0.6);
+  transition: color var(--primary-transition);
+}
+
+.wt-input[name='client_email']:not(:placeholder-shown):valid {
+  border-color: #3cbc81;
+}
+
+.wt-input[name='client_email']:not(:placeholder-shown):invalid {
+  border-color: #e74a3b;
+}
+
+.wt-input:hover::placeholder {
+  color: #fafafa;
+}
+
+.wt-contacts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+  }
+}
+
+.wt-contacts-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-text-hex);
+  padding: 10px 12px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  transition: border-color var(--primary-transition);
+}
+
+.wt-contacts-item:hover,
+.wt-contacts-item:focus {
+  border-color: var(--primary-text-hex);
+}
