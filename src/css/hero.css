@@ -1,4 +1,4 @@
-.container {
+.section {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -47,7 +47,7 @@ a {
 
 /* MOBILE ADAPTIVE */
 @media screen and (min-width: 375px) {
-    .container {
+    .section {
         width: 375px;
         margin-left: auto;
         margin-right: auto;
@@ -101,7 +101,7 @@ a {
 
 /* TABLET */
 @media screen and (min-width: 768px) {
-    .container {
+    .section {
         width: 768px;
         padding-left: 32px;
         padding-right: 32px;
@@ -158,7 +158,7 @@ a {
 
 /* DESKTOP 1440 */
 @media screen and (min-width: 1440px) {
-    .container {
+    .section {
         width: 1440px;
         padding-left: 32px;
         padding-right: 32px;
