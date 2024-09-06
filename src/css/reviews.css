@@ -1,0 +1,34 @@
+.review-title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.myReviewSwiper {
+  width: 1376px;
+  margin: 20px 0;
+}
+
+.swiper-wrapper.card-review {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.swiper-slide.swiper-slide-review {
+  text-align: left;
+  font-size: 18px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 332px;
+}
+
+.review-image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  margin-bottom: 32px;
+}
+
+.review-title {
+  margin-bottom: 8px;
+}
