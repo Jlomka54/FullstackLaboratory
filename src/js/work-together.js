@@ -6,8 +6,20 @@ import 'basiclightbox/dist/basicLightbox.min.css';
 import svgSprite from '../img/icon.svg';
 import '../css/work-together.css';
 
-const instance = basicLightbox.create(
-  `
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
+
+const postClientData = async formData => {
+  const params = {
+    email: formData.client_email,
+    comment: formData.client_comment,
+  };
+
+  return await axios.post('/requests', params);
+};
+
+const createModal = data => {
+  return basicLightbox.create(
+    `
     <div class="wt-modal-overlay">
       <div class="wt-modal">
         <button type="button" class="wt-modal-close-btn">
@@ -15,20 +27,27 @@ const instance = basicLightbox.create(
             <use href="${svgSprite}#icon-close-mob-menu-bt"></use>
           </svg>
         </button>
-        <p class="wt-modal-tittle">Thank you for your interest in cooperation!</p>
-        <p class="wt-modal-message">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+        <p class="wt-modal-tittle">${data.title.trim()}</p>
+        <p class="wt-modal-message">${data.message.trim()}</p>
       </div>
     </div>
     `,
-  {
-    onShow: instance => {
-      instance.element().querySelector('.wt-modal-close-btn').onclick =
-        instance.close;
-    },
-  }
-);
+    {
+      onShow: instance => {
+        instance.element().querySelector('.wt-modal-close-btn').onclick =
+          instance.close;
 
-instance.show();
+        const closeOnEsc = e => {
+          if (e.key === 'Escape' || e.keyCode === 27) {
+            instance.close();
+            document.removeEventListener('keydown', closeOnEsc);
+          }
+        };
+        document.addEventListener('keydown', closeOnEsc);
+      },
+    }
+  );
+};
 
 const formData = { client_email: '', client_comment: '' };
 
@@ -51,20 +70,21 @@ form.addEventListener('input', e => {
   localStorage.setItem('wt-form-data', JSON.stringify(formData));
 });
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
 
   if (formData.client_email === '' || formData.client_comment === '') {
     return;
   }
+
   try {
-    const res = axios
-      .post('https://portfolio-js.b.goit.study/api', { email: formData.client_email, comment: formData.client_comment });
-    
-      console.log(res);
+    const { data } = await postClientData(formData);
+    const modal = createModal(data);
+    modal.show();
   } catch (error) {
     console.log(error);
   }
+  
   formData.client_email = '';
   formData.client_comment = '';
   localStorage.removeItem('wt-form-data');

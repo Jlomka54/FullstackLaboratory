@@ -246,6 +246,9 @@
   font-size: 20px;
   color: var(--primary-text-hex);
   margin-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    min-width: 364px;
+  }
 }
 
 .wt-modal-message {
