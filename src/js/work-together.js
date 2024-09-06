@@ -1,9 +1,10 @@
 'use strict';
 
+import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import svgSprite from '../img/icon.svg';
-import "../css/work-together.css";
+import '../css/work-together.css';
 
 const instance = basicLightbox.create(
   `
@@ -56,8 +57,14 @@ form.addEventListener('submit', e => {
   if (formData.client_email === '' || formData.client_comment === '') {
     return;
   }
-
-  console.log(formData);
+  try {
+    const res = axios
+      .post('https://portfolio-js.b.goit.study/api', { email: formData.client_email, comment: formData.client_comment });
+    
+      console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
   formData.client_email = '';
   formData.client_comment = '';
   localStorage.removeItem('wt-form-data');
