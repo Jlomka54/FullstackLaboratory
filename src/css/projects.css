@@ -1,0 +1,127 @@
+.projects-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  padding: 32px 0;
+}
+
+.projects-container {
+  background-color: #fafafa;
+  border-radius: 24px;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 6px;
+  padding: 32px;
+}
+
+.projects-list-item {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  color: #1c1d20;
+}
+
+.projects-main-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+  padding: 0 32px;
+  color: #1c1d20;
+}
+
+.project-btn {
+  margin: 32px;
+}
+
+.projects-img-block {
+  display: flex;
+  align-items: center;
+  background-color: #242527;
+  border-radius: 0 0 24px 24px;
+
+  padding: 100px 16px;
+}
+
+.projects-swiper {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.swipe-btn {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  stroke: #3b3b3b;
+  &:hover,
+  &:focus,
+  &:disabled {
+    stroke: #fafafa;
+  }
+}
+/* 
+    .swiper {
+
+    }
+
+    .swiper-slide {
+
+    }
+     */
+@media screen and (min-width: 768px) {
+  .projects-list {
+    padding: 64px;
+  }
+
+  .projects-main-title {
+    padding: 0 64px;
+    font-size: 44px;
+    line-height: 100%;
+  }
+
+  .project-btn {
+    margin: 64px;
+  }
+
+  .projects-img-block {
+    padding: 120px 45px;
+  }
+
+  .projects-title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .projects-img-block {
+    border-radius: 0 24px 24px 0;
+    padding: 120px 37px;
+    width: 688px;
+    height: 625px;
+  }
+
+  .projects-title-block {
+    max-width: 688px;
+  }
+}
