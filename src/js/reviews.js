@@ -39,17 +39,17 @@ const fetchReview = () => {
 const createReviewTemplate = reviewCard => {
   return `
   
-  <div class="swiper-slide swiper-review-slide">
-  <a class="review-link" href="${reviewCard.avatar_url}">
+  <li class="swiper-slide swiper-review-slide">
+  <div class="swiper-review-img">  
 		<img 
 			class="review-image" 
 			src="${reviewCard.avatar_url}" 
 			alt="${reviewCard.author}" 
-			/>
-	</a>
+			/>	
+  </div>
       <h3 class="review-container-title">${reviewCard.author}</h3>
       <p class="review-text">${reviewCard.review}</p>
-</div> 
+</li> 
   `;
 };
 
