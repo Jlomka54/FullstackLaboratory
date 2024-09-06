@@ -5,7 +5,8 @@
   |============================
 */
 
-@import 'node_modules/modern-normalize/modern-normalize.css';
+
+
 @import url('./reset.css');
 @import url('./general.css');
 /* Header */
