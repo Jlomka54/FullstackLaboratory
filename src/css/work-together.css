@@ -177,6 +177,15 @@
   border-color: #e74a3b;
 }
 
+.wt-form-wrapper:has(
+    .wt-input[name='client_email']:not(:placeholder-shown):invalid
+  )::after {
+  content: 'Invalid email, try again!';
+  position: absolute;
+  top: 48px;
+  color: #e74a3b;
+}
+
 .wt-input:hover::placeholder {
   color: #fafafa;
 }
