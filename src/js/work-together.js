@@ -6,6 +6,9 @@ import 'basiclightbox/dist/basicLightbox.min.css';
 import svgSprite from '../img/icon.svg';
 import '../css/work-together.css';
 
+const formData = { client_email: '', client_comment: '' };
+const form = document.querySelector('.wt-form');
+
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
 const postClientData = async formData => {
@@ -34,6 +37,7 @@ const createModal = data => {
     `,
     {
       onShow: instance => {
+        document.body.classList.add('no-scroll');
         instance.element().querySelector('.wt-modal-close-btn').onclick =
           instance.close;
 
@@ -45,32 +49,19 @@ const createModal = data => {
         };
         document.addEventListener('keydown', closeOnEsc);
       },
+      onClose: () => {
+        document.body.classList.remove('no-scroll');
+      },
     }
   );
 };
 
-const formData = { client_email: '', client_comment: '' };
-
-if (localStorage.length > 0) {
-  const storedData = localStorage.getItem('wt-form-data');
-  if (storedData) {
-    const { client_email, client_comment } = JSON.parse(storedData);
-    formData.client_email = client_email ?? '';
-    formData.client_comment = client_comment ?? '';
-  }
-}
-
-const form = document.querySelector('.wt-form');
-
-form.elements.client_email.value = formData.client_email;
-form.elements.client_comment.value = formData.client_comment;
-
-form.addEventListener('input', e => {
+const wtInputCallback = (e) => {
   formData[e.target.name] = e.target.value.trim();
   localStorage.setItem('wt-form-data', JSON.stringify(formData));
-});
+};
 
-form.addEventListener('submit', async e => {
+const wtSubmitCallback = async (e) => {
   e.preventDefault();
 
   if (formData.client_email === '' || formData.client_comment === '') {
@@ -84,9 +75,36 @@ form.addEventListener('submit', async e => {
   } catch (error) {
     console.log(error);
   }
-  
+
   formData.client_email = '';
   formData.client_comment = '';
   localStorage.removeItem('wt-form-data');
   form.reset();
-});
+};
+
+const wtObserverCallback = entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      form.addEventListener('input', wtInputCallback);
+      form.addEventListener('submit', wtSubmitCallback);
+    } else {
+      form.removeEventListener('input', wtInputCallback);
+      form.removeEventListener('submit', wtSubmitCallback);
+    }
+  });
+};
+
+if (localStorage.length > 0) {
+  const storedData = localStorage.getItem('wt-form-data');
+  if (storedData) {
+    const { client_email, client_comment } = JSON.parse(storedData);
+    formData.client_email = client_email ?? '';
+    formData.client_comment = client_comment ?? '';
+  }
+}
+
+form.elements.client_email.value = formData.client_email;
+form.elements.client_comment.value = formData.client_comment;
+
+const observer = new IntersectionObserver(wtObserverCallback);
+observer.observe(form);
