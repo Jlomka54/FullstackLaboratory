@@ -1,16 +1,25 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const reviewEl = document.querySelector('.swiper-review-wrapper');
+const a = document.querySelector('review-swiper-button-next');
 
 // -----class swiper-----//
 
 const swiper = new Swiper('.swiper-review', {
-  // Default parameters
-
   slidesPerView: 1,
   spaceBetween: 10,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  mousewheel: {
+    invert: true,
+  },
   navigation: {
     nextEl: '.review-swiper-button-next',
     prevEl: '.review-swiper-button-prev',
@@ -29,7 +38,7 @@ const swiper = new Swiper('.swiper-review', {
 
 // -----get reviews-----//
 
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/ap';
 const fetchReview = () => {
   return axios.get('/reviews');
 };
@@ -57,13 +66,24 @@ const createReviewTemplate = reviewCard => {
 const showReviews = async event => {
   try {
     const response = await fetchReview();
-
     const reviewCardsTemplate = response.data
       .map(reviewDetails => createReviewTemplate(reviewDetails))
       .join('');
     reviewEl.innerHTML = reviewCardsTemplate;
+    const numberEl = response.data.length;
+    const slideNumber = numberEl - swiper.params.slidesPerView;
   } catch (err) {
-    console.log(err);
+    iziToast.error({
+      message: 'Sorry, no reviews found yet',
+      messageColor: '#fafafa',
+      messageSize: '16px',
+      messageLineHeight: '150%',
+      backgroundColor: 'rgba(250, 250, 250, 0.4)',
+      position: 'topRight',
+      maxWidth: 432,
+    });
+    swiper.disable();
+    reviewEl.previousElementSibling.classList.remove('review-hidden');
   }
 };
 
