@@ -1,7 +1,7 @@
 'use strict';
 
 import axios, { AxiosError } from 'axios';
-import iziToast from 'izitoast';
+// import iziToast from 'izitoast';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import svgSprite from '../img/icon.svg';
@@ -84,17 +84,18 @@ const wtSubmitCallback = async (e) => {
     if (error instanceof AxiosError) {
       console.error("Axios Error:", error.message);
       console.error("Error Details:", error.config);
-      iziToast.error({
-        ...TOAST_CONFIG,
-        message: `Sorry, error occurred: ${error.message}. Please try again!`,
-      });
+      // iziToast.error({
+      //   ...TOAST_CONFIG,
+      //   message: `Sorry, error occurred: ${error.message}. Please try again!`,
+      // });
     } else {
       console.error(error);
-      iziToast.error({
-        ...TOAST_CONFIG,
-        message: "Sorry, unexpected error occurred. Please try again!",
-      });
+      // iziToast.error({
+        // ...TOAST_CONFIG,
+        // message: "Sorry, unexpected error occurred. Please try again!",
+      // });
     }
+    return;
   }
 
   formData.client_email = '';
