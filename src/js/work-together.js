@@ -106,5 +106,5 @@ if (localStorage.length > 0) {
 form.elements.client_email.value = formData.client_email;
 form.elements.client_comment.value = formData.client_comment;
 
-const observer = new IntersectionObserver(wtObserverCallback);
-observer.observe(form);
+const wtObserver = new IntersectionObserver(wtObserverCallback);
+wtObserver.observe(form);
