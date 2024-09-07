@@ -79,6 +79,7 @@
 }
 
 .wt-form-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -161,6 +162,15 @@
 
 .wt-input[name='client_email']:not(:placeholder-shown):valid {
   border-color: #3cbc81;
+}
+
+.wt-form-wrapper:has(
+    .wt-input[name='client_email']:not(:placeholder-shown):valid
+  )::after {
+  content: 'Success!';
+  position: absolute;
+  top: 48px;
+  color: #3cbc81;
 }
 
 .wt-input[name='client_email']:not(:placeholder-shown):invalid {
