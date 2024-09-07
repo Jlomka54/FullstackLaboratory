@@ -109,6 +109,7 @@
   letter-spacing: -0.02em;
   line-height: 150%;
   background-color: transparent;
+  text-overflow: ellipsis;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   padding-bottom: 20px;
@@ -127,6 +128,7 @@
 }
 
 .wt-btn {
+  flex-shrink: 0;
   color: var(--primary-text-hex);
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -192,4 +194,65 @@
 .wt-contacts-item:hover,
 .wt-contacts-item:focus {
   border-color: var(--primary-text-hex);
+}
+
+/* MODAL */
+
+/* mob */
+.wt-modal {
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  width: 343px;
+  height: 276px;
+  background: #1c1d20;
+  @media screen and (min-width: 768px) {
+    padding: 64px;
+    width: 492px;
+    height: 246px;
+  }
+}
+
+.wt-modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  @media screen and (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+  border: none;
+  padding: 0;
+}
+
+.wt-modal-close-btn .wt-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.wt-modal p {
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.wt-modal-tittle {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-text-hex);
+  margin-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    min-width: 364px;
+  }
+}
+
+.wt-modal-message {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(250, 250, 250, 0.6);
 }
