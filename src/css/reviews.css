@@ -1,4 +1,4 @@
-.container.container-style {
+.container.container-review {
   background: #1c1d20;
 }
 .swiper-review-wrapper {
@@ -55,22 +55,34 @@
   width: 52px;
   height: 52px;
   stroke: #3b3b3b;
+  transition: stroke 0.3s ease;
   &:hover,
   &:focus {
     stroke: #fafafa;
   }
 }
 
-.review-btn-wraper {
+.review-btn-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   margin-bottom: 4px;
 }
+.review-btn-wrapper button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  stroke: #3b3b3b;
+}
+
+.review-btn-wrapper button:disabled:hover {
+  stroke: #3b3b3b;
+}
+
 .review-hidden {
   display: none;
 }
+
 .review-hidden-text {
   font-weight: 600;
   font-size: 16px;
@@ -82,7 +94,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .review-btn-wraper {
+  .review-btn-wrapper {
     gap: 20px;
   }
 }

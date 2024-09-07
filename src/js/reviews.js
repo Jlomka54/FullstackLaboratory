@@ -5,14 +5,12 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const reviewEl = document.querySelector('.swiper-review-wrapper');
-const a = document.querySelector('review-swiper-button-next');
 
 // -----class swiper-----//
 
 const swiper = new Swiper('.swiper-review', {
   slidesPerView: 1,
-  spaceBetween: 10,
-
+  spaceBetween: 15,
   keyboard: {
     enabled: true,
     onlyInViewport: false,
@@ -38,7 +36,7 @@ const swiper = new Swiper('.swiper-review', {
 
 // -----get reviews-----//
 
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/ap';
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 const fetchReview = () => {
   return axios.get('/reviews');
 };
@@ -70,8 +68,6 @@ const showReviews = async event => {
       .map(reviewDetails => createReviewTemplate(reviewDetails))
       .join('');
     reviewEl.innerHTML = reviewCardsTemplate;
-    const numberEl = response.data.length;
-    const slideNumber = numberEl - swiper.params.slidesPerView;
   } catch (err) {
     iziToast.error({
       message: 'Sorry, no reviews found yet',
