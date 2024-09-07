@@ -7,10 +7,10 @@
 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M24 8l-16 16"></path>
 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M8 8l16 16"></path>
 </symbol>
-<symbol id="icon-top-arrow" viewBox="0 0 32 32">
+<symbol id="icon-arrow-up" viewBox="0 0 32 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 20l-8-8-8 8"></path>
 </symbol>
-<symbol id="icon-down-arrow-right" viewBox="0 0 32 32">
+<symbol id="icon-arrow-down" viewBox="0 0 32 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 12l-8 8-8-8"></path>
 </symbol>
 <symbol id="icon-arrow-arrow-left" viewBox="0 0 32 32">
