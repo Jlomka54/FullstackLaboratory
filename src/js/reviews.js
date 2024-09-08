@@ -7,7 +7,7 @@ const reviewEl = document.querySelector('.swiper-review-wrapper');
 
 // -----class swiper-----//
 
-const swiper = new Swiper('.swiper-review', {
+const paramSwiperReview = {
   slidesPerView: 1,
   spaceBetween: 15,
   keyboard: {
@@ -31,7 +31,8 @@ const swiper = new Swiper('.swiper-review', {
       spaceBetween: 16,
     },
   },
-});
+};
+const swiper = new Swiper('.swiper-review', paramSwiperReview);
 
 // -----get reviews-----//
 
@@ -53,8 +54,8 @@ const createReviewTemplate = reviewCard => {
 			alt="${reviewCard.author}" 
 			/>	
   </div>
-      <h3 class="review-container-title">${reviewCard.author}</h3>
-      <p class="review-text">${reviewCard.review}</p>
+      <h3 class="review-container-title section-text">${reviewCard.author}</h3>
+      <p class="review-text section-text">${reviewCard.review}</p>
 </li> 
   `;
 };
