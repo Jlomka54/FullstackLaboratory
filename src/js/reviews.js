@@ -1,8 +1,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import axios from 'axios';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import reviewError from './custom-izibox';
 
 const reviewEl = document.querySelector('.swiper-review-wrapper');
 
@@ -69,16 +68,7 @@ const showReviews = async event => {
       .join('');
     reviewEl.innerHTML = reviewCardsTemplate;
   } catch (err) {
-    iziToast.error({
-      titleSize: '16px',
-      maxWidth: 432,
-      position: 'topRight',
-      closeOnEscape: true,
-      theme: 'dark',
-      timeout: 4000,
-      message: 'Sorry, no reviews found yet',
-      backgroundColor: '#ef4040',
-    });
+    reviewError('error', 'Sorry, no reviews found yet');
     swiper.disable();
     reviewEl.previousElementSibling.classList.remove('review-hidden');
   }
