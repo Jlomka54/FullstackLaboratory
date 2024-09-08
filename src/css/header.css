@@ -230,6 +230,7 @@
   transform: translateX(100%);
   transition: transform 350ms ease;
   z-index: 999;
+  background-image: url(../img/hero/hero-bg-mob.png);
 }
 .is-open {
   transform: translateX(0);
