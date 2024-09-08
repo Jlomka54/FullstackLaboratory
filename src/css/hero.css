@@ -3,7 +3,13 @@
     padding-right: 16px;
 }
 
-
+.hero-title{
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+}
 
 a {
     text-decoration: none;
@@ -105,7 +111,7 @@ a {
         text-transform: uppercase;
         color: #fafafa;
         padding-top: 94px;
-        padding-left: 32px;
+        padding-left: 94px;
         padding-bottom: 94px;
     }
 
