@@ -15,11 +15,152 @@
     <script type="module" crossorigin src="/project-team-10/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-team-10/assets/vendor-rCQo0-9j.js">
     <link rel="stylesheet" crossorigin href="/project-team-10/assets/vendor-BUD-evpM.css">
-    <link rel="stylesheet" crossorigin href="/project-team-10/assets/index-BjFSkoLh.css">
+    <link rel="stylesheet" crossorigin href="/project-team-10/assets/index-BdmEHACG.css">
   </head>
   <body>
     <!-- Header -->
-    
+    <header id="header" class="header">
+  <div class="header-box">
+    <div class="header-wrap">
+      <div class="header-logo">
+        <a href="./index.html">
+          <img
+            class="header-logo-image"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAAXNSR0IArs4c6QAAAMxQTFRFAAAA0s/L1tPR3Nna3NjX2tbV2NPR08/L0czJz8vGzMXAxby3vrGotqKWr5B+p4VxoHtnlXFfiWdVaks9fVxLOCIYSi0gWzsraz8se0g0e1I/jVtEm2hQqnBWtH1iw4hs0JZ80aCHtohwvZR+waCN0qqW3raj3b+x4Ma74c3E1LWlmY+LWFVUAAABAQMEAwcJBwwODhMXFx0hIyowPz9AhX97qKOgdHBwrlI7HSUtkZGRCg4RycXC08/M1M/O1NDNFBogGBwhAgQFEBUaARYlOAAAAER0Uk5TABvc//////////7/////////////////////////////////////////////////////////////36CTSsdnm8Ni2x0ETdG3AAAIHElEQVR42gXB7a/dVUIG0PXsfc65t6UvtrctSMVhpBpDwJkIGicZ+5/XTnhxvmiiySR+MDOGASKlTCEC5fae89uPawUA8s/5eFcIQBoNEJAKAPlg9OMCIAA87m+bgDQgTdM0DRAgAGh8mI8ABODX/zpIg1SQpqk0jQZSAQIAvPr1R4AAefwpCJAGkEqlaSANSAMAaf7ho4IJks9DCCAQCFLJmHOOKCECAPjynz4HgSQCaSANkKZkZogxBttpbQ0CAOBViyAJQRogDYDYD1EygrVtCwIA4MNPysDjQKkCDcDIPEwZc2bOa+ejxtn5fgAAgH9/jPD4UyDSAGk0ZGZkx/kr3YDIsE6nCkgB8MEnJp8PSAhpIE2QMcd+z+50WslUA/bjMAoAAvI/NTxOoag0CFGZ+91+N0/dnXgg1oPsrs9d5rA/+zkAFNKzx2IECEgFhLnbZ2qa9urB87nfTk1mz17N4OUJAEA++HgkEIogkFR2+/1A2a8HX49eGcM6lix6mAAg6L9lPv48AIEgSOecAclx/JjE1iXplkGMeQIA4FejClAoKmTsZpFsR/vXblirF2MsehZRcyoEABmfAgABqtmdi4Sz0zYPh5t3793/U7b7d28ECwZQAPLxmAEATUFMVzozNlcuDp379Jvevf/NC9faoUgAAHq+W0BKGilQKjnu091PD9jjdFe+GakkkQoNANAdoKQoIK2tc5fjennPmgPXjtat1aZpigAAkAFAA4BaD3qWXJ3lwtcZBEcIVZKBFhDQAWAoBaDPXM7kZVMDgRNkDCNJtpIACgwACwLAatfV2FbrfmfJyX5kJGQgV8dGWwCwA8BYKQBZw/ayFwlA2B2FSiRrKwQA7ACwrADQ00x7MYIeRwj2x9GG0ct1WhoAgB0AY40FDUhb97DnCCD7I+D69wUAgAHAsgIK4F5G9mz7EYJIyD7Jjz2hVAvAAMBQkEK5n9TRGh0BrXbqC/1RAqpSAAMAKyE0gBD7LQraXY9rvGhvrF7PGNCgAGQCSAMQNIc3++z1Z68fFsSaP+VKUV3N/L9TQUCATADSiEYDjy75du7ewuVrP/zRGNe2koza1Lh/fnkt/4mQpoHMFCAgDfD2xVd0zGf5y7Om6Rf7bs105GG+WFen97qu/jsNSANzAEIQCeC1G1cn47C/cWttL7/44YdbP/6Ucnnj8uGt+GGdtq+f3+63JQSCHaQ0GpoGAJYVWfPB6pdnu1PX/vo+z1azO1L+UIJKA3MIgkREAOv1F33jRc4SSYzDjdNkHHL2w5m11tq2jIdfQZCmwaBoEgDA+P2on02aMrJ9hXG+36X7nSzh/QCoUgaCFhEAOPfll91owJYts/rsYj/G4dpr7Po7CIg0zBEihAAEfHe3Z2sGQg/fH0bmi9O1s65xPB7XfPe/TpAGCDIhFQJACo+2sa7OK9Jqn4/sjrf3XG2nHt/4bFsgQCrMIUgIAAJeXPR4CALJa/vZa7k8dTt1Xn1zbCAahGAkRCmAiAh+/4dDNxRJdO1iP45X1RJIBVrFQBoEiDQqAmMOqNB2zGGttUtqUaAQUQZEJCBNQ0qDPyZBijJ01dCOlkCEaBoMAIUgECDvCkJbkjl3a1sbViEUCg07gIKGBojQNVAaZLzaqtX50xI0AmkKdgCBaARAU7e+T6Wi4rjZe/hZZTtpoGloKjAEEtAGANh1u9kYQYJr53OQma2CNAINMEhQiKgCVN/vOt0uBexOMj/LYKMQEGkUIyURpFpC0XJYrJc3//c0q2176tquttWtBAEUBEMAFEnbpkXXey3j1TuHY1f11CbDQIYGgAAYoApoobTdf3gCYxs3/rS27bhWk0qSq0KEiKYB5oRIhUoB/P39DSGybn/TYrDapqdLQUiJBDAnVKQENGN3eOftbWsgJb158zsldJNenYgAqQDMiQaAzv0v37z15xdz00IkRG9/p7JsZXu1hCCJBMAOgDnTjrevrSu7DUmlIBXbm/OLbbDJ6fIEoAIAO1Q5e29rQ9eqGjRaioIe3xyf8/DLn/1uawAEAGRP9eyvzlY1WU2KjjRdIyhFFWScrv8HRBDQAOaE83dHQZKqSCVpE4AqkHLnrecVIRUQYE519retSlRSRUqyAiAChJXTgztvPS8pkKhgzhqPJgAdBNHIIhAKILByev3P/uKN5xCQwMAvztAkKbaBtkkZLdoCQAMcc/nTX7/7/i9/oS3AHM7uVYUGGCugkRAJABAAurbjduf7RQiGvrcAIaEioE20NCAAAEDzN38HijkO90oIEKQJIaQkVQhIAQBW3/y6Qsz5aAcCSYOhIYEoiUAhAADouvNdRTK2EBBIQxGliKogEiIAAmDNd4bqB/NXpKRJm0YDQUDSBpE0kigkiSQBuPMt3pqPXoFmiRXQkBARQQg0QokAEJCHz3g4BgWjTVoKgCoBBQgAQACvHvHxeHITqKwVCg0otLRAEAVAEiISPdv9Y4dIiUqbFlGAQgCqUQAEAimnn9fw9JBBkaxGFQQBkhZEABABEOiDTwyuFyCjtIpCoQBQAECColAGT84FVclKAIIAoRABAFVASm49ZeD8piipkQXQglJSJaAFoFBRce8cA0/mQdLSRAEBgChAIQAATe/nCQY8uX4wRqsVgAKAAFAAgBbu5wkM8OT6NWNWGgAAKCgAQBWguZknYABPPr11yGgrAKABBAgFAgH0/sWnT4AB8PS3t24PCgCEoqRQAIVSXNz7l6cAA4Cnv7l7987FCKBAAFJECwAZFzfuPfjNUwD+H9QnWyqs48f4AAAAAElFTkSuQmCC 1x, /project-team-10/assets/developer2x-B_SwtOIz.png 2x"
+            src="./img/header/developer.png 1x"
+            alt="Lloyd Jefferson"
+            loading="lazy"
+            width="80"
+            height="80"
+          />
+        </a>
+
+        <a href="./index.html" class="header-logo-text">jefferson&#42;</a>
+      </div>
+      <div class="header-dropdown">
+        <button
+          class="js-dropdown-toggle dropdown-toggle"
+          aria-label="drop-menu-btn"
+          type="button"
+        >
+          Menu
+        </button>
+        <ul class="js-dropdown-menu dropdown-menu">
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#about-me"
+              aria-label="about-me-section-link"
+              >About me</a
+            >
+          </li>
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#benefits-section"
+              aria-label="benefits-section-link"
+              >Benefits</a
+            >
+          </li>
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#projects-section"
+              aria-label="projects-section-link"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#faq-section"
+              aria-label="faq-section-link"
+              >FAQ</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <a
+          href="#work-together"
+          aria-label="work-together-link"
+          class="header-order-btn"
+          >Order the project</a
+        >
+      </div>
+      <button
+        class="header-btn js-open-menu"
+        aria-label="button-menu-open"
+        type="button"
+      >
+        <svg class="header-btn-open" width="28" height="28">
+          <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+    <button id="scrollToTopBtn" class="scroll-to-top">
+      <svg class="scrol-to-up-img" width="30" height="30">
+        <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-arrow-arrow-left"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+<!--========Mobile menu=======-->
+
+<div class="mob-wrap js-menu-container" id="mobile-menu">
+  <button
+    class="mob-btn-close js-close-menu"
+    aria-label="button-menu-close"
+    type="button"
+  >
+    <svg class="btn-close" width="28" height="28">
+      <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-close-mob-menu-bt"></use>
+    </svg>
+  </button>
+  <nav class="mob-menu">
+    <ul class="mob-list">
+      <li class="mob-item">
+        <a
+          href="#about-me"
+          aria-label="about-me-section-link"
+          class="mob-link js-header-link"
+          >About me</a
+        >
+      </li>
+      <li class="mob-item">
+        <a
+          href="#benefits-section"
+          aria-label="benefits-section-link"
+          class="mob-link js-header-link"
+          >Benefits</a
+        >
+      </li>
+      <li class="mob-item">
+        <a
+          href="#projects-section"
+          aria-label="projects-section-link"
+          class="mob-link js-header-link"
+          >Projects</a
+        >
+      </li>
+      <li class="mob-item">
+        <a
+          href="#faq-section"
+          aria-label="faq-section-link"
+          class="mob-link js-header-link"
+          >FAQ</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <a
+    href="#work-together"
+    aria-label="work-together-link"
+    class="modal-btn-order js-header-link"
+    >Order the project</a
+  >
+</div>
+
 
     <main>
       <!-- Hero -->
