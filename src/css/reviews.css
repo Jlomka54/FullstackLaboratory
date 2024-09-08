@@ -48,6 +48,7 @@
   height: 52px;
   transition: var(--primary-transition);
   stroke: var(--arrow-color-inactive);
+  fill: transparent;
   &:hover,
   &:focus {
     stroke: var(--primary-text-hex);
@@ -60,6 +61,10 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 4px;
+}
+
+.review-btn-wrapper button {
+  stroke: var(--primary-text-hex);
 }
 
 .review-btn-wrapper button:disabled {
