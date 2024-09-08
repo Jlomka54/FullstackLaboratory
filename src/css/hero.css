@@ -1,4 +1,4 @@
-.hero-section {
+.section {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -202,7 +202,7 @@ a {
 
 
 .hero {
-   
+
     background-repeat: no-repeat;
     /*background-position: center;*/
     background-size: cover;
