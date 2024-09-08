@@ -70,7 +70,14 @@ const showReviews = async event => {
     reviewEl.innerHTML = reviewCardsTemplate;
   } catch (err) {
     iziToast.error({
+      titleSize: '16px',
+      maxWidth: 432,
+      position: 'topRight',
+      closeOnEscape: true,
+      theme: 'dark',
+      timeout: 4000,
       message: 'Sorry, no reviews found yet',
+      backgroundColor: '#ef4040',
     });
     swiper.disable();
     reviewEl.previousElementSibling.classList.remove('review-hidden');
