@@ -215,6 +215,7 @@
 .is-open {
   transform: translate(0%, 0%) scale(1);
   opacity: 1;
+  visibility: visible;
 }
 
 .mob-wrap {
@@ -223,12 +224,6 @@
   right: 0;
   min-width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(59, 59, 59, 0.2),
-      rgba(255, 255, 255, 0)
-    ),
-    url(/img/header-img/modal@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -239,18 +234,11 @@
   padding: 302px 60px 64px 60px;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  visibility: hidden;
 }
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
-  .mob-wrap {
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0),
-        rgba(59, 59, 59, 0.2),
-        rgba(255, 255, 255, 0)
-      ),
-      url(/img/header-img/modal@2x.jpg);
-  }
 }
 
 .mob-btn-close {
@@ -266,7 +254,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
-  stroke: #fafafa;
+  fill: #fafafa;
 }
 
 .mob-btn-close:hover,

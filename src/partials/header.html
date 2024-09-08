@@ -6,8 +6,8 @@
           <img
             class="header-logo-image"
             srcset="
-              ./img/header/developer.png  1x,
-              /img/header/developer2x.png 2x
+              ./img/header/developer.png   1x,
+              ./img/header/developer2x.png 2x
             "
             src="./img/header/developer.png 1x"
             alt="Lloyd Jefferson"
@@ -76,14 +76,70 @@
         type="button"
       >
         <svg class="header-btn-open" width="28" height="28">
-          <use href="/img/icons.svg#icon-burge"></use>
+          <use href="/img/icons.svg#icon-close-mob-menu-bt"></use>
         </svg>
       </button>
     </div>
     <button id="scrollToTopBtn" class="scroll-to-top">
       <svg class="scrol-to-up-img" width="30" height="30">
-        <use href="/img/icons.svg#icon-arrow-narrow-left"></use>
+        <use href="/img/icons.svg#icon-arrow-arrow-left"></use>
       </svg>
     </button>
   </div>
 </header>
+<!--========Mobile menu=======-->
+<div class="backdrop js-menu-container" id="mobile-menu"></div>
+  <div class="mob-wrap">
+    <button
+      class="mob-btn-close js-close-menu"
+      aria-label="button-menu-close"
+      type="button"
+    >
+      <svg class="btn-close" width="28" height="28">
+        <use href="./img/icons.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <nav class="mob-menu">
+      <ul class="mob-list">
+        <li class="mob-item">
+          <a
+            href="#about-me"
+            aria-label="about-me-section-link"
+            class="mob-link js-header-link"
+            >About me</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#benefits-section"
+            aria-label="benefits-section-link"
+            class="mob-link js-header-link"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#projects-section"
+            aria-label="projects-section-link"
+            class="mob-link js-header-link"
+            >Projects</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#faq-section"
+            aria-label="faq-section-link"
+            class="mob-link js-header-link"
+            >FAQ</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a
+      href="#work-together"
+      aria-label="work-together-link"
+      class="modal-btn-order js-header-link"
+      >Order the project</a
+    >
+  </div>
+</div>
