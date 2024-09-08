@@ -198,11 +198,10 @@
   }
 }
 
-/* mob menu */
-.backdrop {
+/* mob menu .backdrop {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   padding: 32px;
@@ -210,16 +209,10 @@
   opacity: 0;
   transition: transform 300ms ease, opacity 300ms ease;
   transform: translate(37%, -43%) scale(0);
-}
-
-.is-open {
-  transform: translate(0%, 0%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
+}*/
 
 .mob-wrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   min-width: 100%;
@@ -234,7 +227,12 @@
   padding: 302px 60px 64px 60px;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform 350ms ease;
+  z-index: 999;
+}
+.is-open {
+  transform: translateX(0);
 }
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
