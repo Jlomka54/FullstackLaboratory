@@ -71,12 +71,6 @@ const showReviews = async event => {
   } catch (err) {
     iziToast.error({
       message: 'Sorry, no reviews found yet',
-      messageColor: '#fafafa',
-      messageSize: '16px',
-      messageLineHeight: '150%',
-      backgroundColor: 'rgba(250, 250, 250, 0.4)',
-      position: 'topRight',
-      maxWidth: 432,
     });
     swiper.disable();
     reviewEl.previousElementSibling.classList.remove('review-hidden');
