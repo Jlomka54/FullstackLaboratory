@@ -1,10 +1,12 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import { onOpenHandle } from "./utilits";
+
 import Swiper from 'swiper';
 import 'swiper/css';
+
 import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
+import { onOpenHandle } from './utilits';
 
 
 const accordion = new Accordion('.about-me__accord_list', {
@@ -25,7 +27,6 @@ setTimeout(() => {
 }, 1000);
 
 
-
 const swiperAbout = new Swiper('.about-swiper-container', {
   slidesPerView: 'auto',
   spaceBetween: 0,
@@ -33,10 +34,6 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   modules: [Navigation, Pagination, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.about-button-swip',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
   },
 
   simulateTouch: true,
@@ -61,12 +58,8 @@ function updateActiveSlideColor() {
     '#custom-swiper .about-swiper-skills.swiper-slide-active'
   );
   if (activeSlide) {
-    const selectedColor = localStorage.getItem('selectedColor') || '#c6e327';
-    activeSlide.style.setProperty(
-      'background-color',
-      selectedColor,
-      'important'
-    );
+    const selectedColor = '#ed3b44';
+    activeSlide.style.setProperty('background-color', selectedColor);
   }
 }
 

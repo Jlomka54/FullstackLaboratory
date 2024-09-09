@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import axios from 'axios';
-import reviewError from './custom-izibox';
+import { invokeToast } from './utilits';
 
 const reviewEl = document.querySelector('.swiper-review-wrapper');
 
@@ -69,7 +69,7 @@ const showReviews = async event => {
       .join('');
     reviewEl.innerHTML = reviewCardsTemplate;
   } catch (err) {
-    reviewError('error', 'Sorry, no reviews found yet');
+    invokeToast('error', 'Sorry, no reviews found yet');
     swiper.disable();
     reviewEl.previousElementSibling.classList.remove('review-hidden');
   }
