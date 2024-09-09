@@ -1,7 +1,7 @@
 'use strict';
 
 import axios, { AxiosError } from 'axios';
-import invokeToast from './custom-izibox';
+import { invokeToast } from './utilits';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import svgSprite from '../img/icon.svg';
