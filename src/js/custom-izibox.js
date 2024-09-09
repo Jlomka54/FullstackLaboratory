@@ -2,7 +2,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 export default (type, message) => {
-  const toastConfig = {
+  const TOAST_CONFIG = {
     titleSize: '16px',
     maxWidth: 432,
     position: 'topRight',
@@ -14,20 +14,20 @@ export default (type, message) => {
   switch (type) {
     case 'success':
       iziToast.success({
-        ...toastConfig,
+        ...TOAST_CONFIG,
         message,
       });
       break;
     case 'error':
       iziToast.error({
-        ...toastConfig,
+        ...TOAST_CONFIG,
         backgroundColor: '#ef4040',
         message,
       });
       break;
     case 'warning':
       iziToast.warning({
-        ...toastConfig,
+        ...TOAST_CONFIG,
         message,
       });
       break;
