@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import { onOpenHandle } from "./utilits";
 
 const accordion = new Accordion('.about-me__accord_list', {
   duration: 350,
