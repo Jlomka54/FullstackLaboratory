@@ -1,6 +1,11 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import { onOpenHandle } from "./utilits";
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
+
+
 
 const accordion = new Accordion('.about-me__accord_list', {
   duration: 350,
@@ -19,28 +24,6 @@ setTimeout(() => {
   accordion.attachEvents();
 }, 1000);
 
-function onOpenHandle(currElement) {
-  const activeAcRect = currElement.getBoundingClientRect();
-
-  const viewHeight = Math.max(
-    document.documentElement.clientHeight,
-    window.innerHeight
-  );
-
-  if (activeAcRect.bottom > viewHeight) {
-    window.scrollTo({
-      top:
-        activeAcRect.top +
-        window.scrollY -
-        (viewHeight - activeAcRect.height) / 2,
-      behavior: 'smooth',
-    });
-  }
-}
-import Swiper from 'swiper';
-import 'swiper/css';
-
-import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 
 const swiperAbout = new Swiper('.about-swiper-container', {
