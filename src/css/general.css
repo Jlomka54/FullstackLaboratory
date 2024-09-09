@@ -1,11 +1,25 @@
 :root {
   scroll-behavior: smooth;
 
-  --basic-color-bt: #ed3b44;
   --primary-text-hex: #fafafa;
   --arrow-color-inactive: #3b3b3b;
 
   --primary-transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  body[data-theme='red'] {
+    --basic-color-bt: #ed3b44;
+    --basic-hovered-color-btn: #e0373f;
+  }
+
+  body[data-theme='blue'] {
+    --basic-color-bt: #0041e8;
+    --basic-hovered-color-btn: #003ddb;
+  }
+
+  body[data-theme='yellow'] {
+    --basic-color-bt: #c6e327;
+    --basic-hovered-color-btn: #c0d623;
+  }
 }
 
 body {
@@ -54,7 +68,7 @@ Utils
 
 .main-btn:hover,
 .main-btn:focus {
-  background-color: #bf3d44;
+  background-color: var(--basic-hovered-color-btn);
 }
 
 @media screen and (min-width: 768px) {

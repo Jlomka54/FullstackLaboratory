@@ -122,12 +122,12 @@
 
   .dropdown-toggle:hover,
   .dropdown-toggle:focus {
-    color: #ed3b44;
+    color: var(--basic-color-bt);
   }
 
   .dropdown-toggle:hover::after,
   .dropdown-toggle:focus::after {
-    background-color: #ed3b44;
+    background-color: var(--basic-color-bt);
   }
 
   .dropdown-menu {
@@ -160,7 +160,7 @@
 
   .header-menu-link:hover,
   .header-menu-link:focus {
-    color: #ed3b44;
+    color: var(--basic-hovered-color-btn);
     text-decoration: underline;
   }
 
@@ -168,7 +168,7 @@
     display: inline-block;
     padding: 18px 24px;
     border-radius: 60px;
-    background-color: #ed3b44;
+    background-color: var(--basic-color-bt);
     color: #fafafa;
     max-width: 163px;
     font-weight: 500;
@@ -180,7 +180,7 @@
 
   .header-order-btn:hover,
   .header-order-btn:focus {
-    background-color: #e0373f;
+    background-color: var(--basic-hovered-color-btn);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   }
 
@@ -236,7 +236,8 @@
   transform: translateX(100%);
   transition: transform 350ms ease;
   z-index: 999;
-  background-image: url(../img/hero/hero-bg-mob.png);
+  background-image: url('../img/hero/red-hero-bg-mob.png'),
+    linear-gradient(to right, #1c1d20, #1c1d20);
 }
 .is-open {
   transform: translateX(0);
@@ -265,7 +266,7 @@
 
 .mob-btn-close:hover,
 .mob-btn-close:focus {
-  stroke: #ed3b44;
+  stroke: var(--basic-hovered-color-btn);
 }
 
 .mob-menu {
@@ -292,5 +293,5 @@
   color: #fafafa;
   border-radius: 60px;
   padding: 14px 30px;
-  background-color: #ed3b44;
+  background-color: var(--basic-color-bt);
 }
