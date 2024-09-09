@@ -1,4 +1,4 @@
-.hero-section {
+.section {
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -104,8 +104,8 @@ a {
         letter-spacing: -0.03em;
         text-transform: uppercase;
         color: #fafafa;
-        padding-top: 94px;
-        padding-left: 32px;
+        padding-top: 120px;
+        padding-left: 94px;
         padding-bottom: 94px;
     }
 
@@ -202,7 +202,7 @@ a {
 
 
 .hero {
-   
+
     background-repeat: no-repeat;
     /*background-position: center;*/
     background-size: cover;
