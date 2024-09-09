@@ -1,6 +1,6 @@
 .section {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 
@@ -38,7 +38,7 @@ a {
 
 /* MOBILE ADAPTIVE */
 @media screen and (min-width: 375px) {
-    .hero-section {
+    .section {
         width: 375px;
         background-image: url(../img/hero/hero.png);
     }
@@ -90,7 +90,7 @@ a {
 
 /* TABLET */
 @media screen and (min-width: 768px) {
-    .hero-section {
+    .section {
         width: 768px;
         background-image: url(../img/hero/hero-bg-tabl.png);
     }
@@ -145,7 +145,7 @@ a {
 
 /* DESKTOP 1440 */
 @media screen and (min-width: 1440px) {
-    .hero-section {
+    .section {
         width: 1440px;
         background-image: url(../img/hero/hero-bg-desk.png);
     }
@@ -202,10 +202,11 @@ a {
 
 
 .hero {
-
     background-repeat: no-repeat;
     /*background-position: center;*/
     background-size: cover;
     background-image: url(../img/hero/hero.png);
-    margin: 0 auto;
+    margin:0 auto;
+    margin-left:-32px;
+    margin-right: -32px;
 }
