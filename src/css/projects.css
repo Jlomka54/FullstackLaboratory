@@ -71,53 +71,69 @@
   padding: 100px 16px;
 }
 
-.projects-swiper-btn {
- 
+.project-arrow {
+  width: 116px;
+  height: 52px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   gap: 12px;
 }
 
-.projects-swiper-btn button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 14px;
+.btn-circle {
   width: 52px;
   height: 52px;
-  background: transparent;
-  color: #fafafa;
-  bottom: 10px;
-  z-index: 10;
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  flex-shrink: 0;
+  display: flex;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.projects-swiper-btn .swiper-button-prev {
+.project-arrow .swiper-button-prev {
   position: relative;
-  left: -20px;
+  left: -12px;
   top: 10px;
 }
 
-.projects-swiper-btn .swiper-button-next {
+.project-arrow .swiper-button-next {
   position: relative;
-  left: 20px;
+  left: 12px;
   top: 10px;
 }
-.swiper-button-next svg {
-  z-index: 100;
-  color: #fafafa;
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  fill: rgba(250, 250, 250, 0.1);
+  stroke: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+svg.swiper-button-icon.icon-left,
+svg.swiper-button-icon.icon-right {
+  width: 24px;
+  height: 24px;
 }
 
 @media screen and (min-width: 768px) {
-
   .projects-swiper-btn {
-      padding: 32px;
+    padding: 32px;
   }
-  
+
   .project-container {
     min-width: 640px;
     height: 1379px;
@@ -140,6 +156,36 @@
     width: 100%;
     height: 50%;
     padding: 120px 45px;
+  }
+
+  .project-arrow {
+    width: 156px;
+    height: 68px;
+    gap: 20px;
+  }
+
+  .btn-circle {
+    width: 68px;
+    height: 68px;
+    padding: 18px;
+  }
+
+  .project-arrow .swiper-button-prev {
+    position: relative;
+    left: -20px;
+    top: 10px;
+  }
+
+  .project-arrow .swiper-button-next {
+    position: relative;
+    left: 20px;
+    top: 10px;
+  }
+
+  svg.swiper-button-icon.icon-left,
+  svg.swiper-button-icon.icon-right {
+    width: 32px;
+    height: 32px;
   }
 }
 

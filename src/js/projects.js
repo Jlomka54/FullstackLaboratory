@@ -3,6 +3,8 @@ import Swiper from 'swiper/bundle';
 // import styles bundle
 import 'swiper/css/bundle';
 
+
+
 var swiper = new Swiper(".project-swiper", {
 	slidesPerView: 1,
 	spaceBetween: 30,
@@ -18,7 +20,6 @@ var swiper = new Swiper(".project-swiper", {
 	speed: 900,
 });
 
-// import Swiper from 'swiper/bundle';
 
 // import 'swiper/css/bundle';
 
