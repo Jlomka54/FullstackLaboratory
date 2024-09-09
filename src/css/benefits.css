@@ -1,4 +1,6 @@
 .benefit-svg {
+  fill: var(--basic-color-bt);
+  stroke: #fafafa;
   border-radius: 10px;
   width: 48px;
   height: 48px;
