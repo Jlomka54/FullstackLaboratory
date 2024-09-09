@@ -4,6 +4,8 @@
   --basic-color-bt: #ed3b44;
   --primary-text-hex: #fafafa;
   --arrow-color-inactive: #3b3b3b;
+  --bg-arrows: #3b3b3b;
+  --bg-arrows-hover: #aaaaaa;
 
   --primary-transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
