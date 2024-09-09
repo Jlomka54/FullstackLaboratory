@@ -12,10 +12,10 @@
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
 }
 
 .benefits_2 {
+  color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
 }
 
@@ -107,7 +107,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -158,7 +158,7 @@
 
 .benefit-button {
   padding: 18px 36px;
-  border: none;
+
   outline: none;
   color: #fff;
   background: #111;
@@ -186,7 +186,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+
   left: 0;
   top: 0;
   border-radius: 60px;
