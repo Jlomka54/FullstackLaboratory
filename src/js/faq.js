@@ -4,7 +4,6 @@ import { onOpenHandle } from './utilits';
 
 new Accordion('.faq-accordion-container', {
   duration: 350,
-  showMultiple: true,
+  showMultiple: false,
   onOpen: onOpenHandle,
 });
-
