@@ -1,14 +1,19 @@
 import { updateActiveSlideColor } from './about-me';
 
-const themeColorBtns = document.querySelectorAll('button[data-color]');
+const themePicker = document.querySelector('.theme-picker_container');
 
 document.body.dataset.theme =
   JSON.parse(localStorage.getItem('currentTheme')) || 'red';
 
-themeColorBtns.forEach(btn => btn.addEventListener('click', updateThemeColor));
+themePicker.addEventListener('click', updateThemeColor);
 
 function updateThemeColor(event) {
+  if (event.target.nodeName !== 'BUTTON') {
+    return;
+  }
+
   const pickedColor = event.target.dataset.color;
+
   document.body.dataset.theme = pickedColor;
   updateActiveSlideColor();
 

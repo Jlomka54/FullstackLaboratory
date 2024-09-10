@@ -203,7 +203,6 @@ About-Me Swiper
 }
 
 .about-swiper-skills.active {
-  background-color: var(--lime);
   transition: opacity 0.5s ease-in-out;
 }
 
