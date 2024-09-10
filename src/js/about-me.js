@@ -8,7 +8,6 @@ import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 import { onOpenHandle } from './utilits';
 
-
 const accordion = new Accordion('.about-me__accord_list', {
   duration: 350,
   elementClass: 'about-me__accord_item',
@@ -25,7 +24,6 @@ accordion.open(0);
 setTimeout(() => {
   accordion.attachEvents();
 }, 1000);
-
 
 const swiperAbout = new Swiper('.about-swiper-container', {
   slidesPerView: 'auto',
@@ -47,18 +45,24 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   },
 });
 
-function updateActiveSlideColor() {
+export function updateActiveSlideColor() {
   document
     .querySelectorAll('#custom-swiper .about-swiper-skills')
     .forEach(slide => {
       slide.style.removeProperty('background-color');
     });
 
+  let currentColor;
+
+  currentColor = getComputedStyle(document.body)
+    .getPropertyValue('--basic-color-bt')
+    .trim();
+
   const activeSlide = document.querySelector(
     '#custom-swiper .about-swiper-skills.swiper-slide-active'
   );
   if (activeSlide) {
-    const selectedColor = '#ed3b44';
+    const selectedColor = currentColor;
     activeSlide.style.setProperty('background-color', selectedColor);
   }
 }

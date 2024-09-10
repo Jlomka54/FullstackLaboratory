@@ -1,3 +1,7 @@
+/* ===============
+About-Me Section
+================ */
+
 .about-me__preview {
   margin-bottom: 32px;
 }
@@ -64,6 +68,10 @@
     margin-bottom: 96px;
   }
 }
+
+/* ===============
+About-Me Accordion
+================ */
 
 .about-me__accord_item {
   padding-bottom: 32px;
@@ -160,6 +168,10 @@
   }
 }
 
+/* ===============
+About-Me Swiper
+================ */
+
 #custom-swiper {
   display: flex;
 
@@ -214,14 +226,11 @@
   }
 }
 
-
 .about-swiper-container li {
   margin-right: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
-  
-
   #custom-swiper {
     gap: 64px;
     max-width: 700px;
@@ -244,7 +253,6 @@
 }
 
 @media screen and (min-width: 1440px) {
- 
   #custom-swiper {
     gap: 72px;
     max-width: 1312px;

@@ -1,10 +1,10 @@
 .benefit-svg {
-  fill: #ed3b44;
+  fill: transparent;
   stroke: #fafafa;
   border-radius: 10px;
   width: 48px;
   height: 48px;
-  background-color: #ed3b44;
+  background-color: var(--basic-color-bt);
   padding: 12px;
   margin-bottom: 64px;
 }

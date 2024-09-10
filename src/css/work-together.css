@@ -151,7 +151,7 @@
 
 .wt-btn:hover,
 .wt-btn:focus {
-  background-color: #e0373f;
+  background-color: var(--basic-hovered-color-btn);
   border: none;
 }
 
