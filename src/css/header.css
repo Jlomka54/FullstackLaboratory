@@ -200,20 +200,6 @@
 
 
 /* mob menu */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-
-
-}
-
-.is-open {
-  transform: translate(0%, 0%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
 
 .mob-wrap {
   position: absolute;
@@ -233,16 +219,17 @@
   overflow-y: scroll;
 
 
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: transform 350ms ease;
   z-index: 999;
   background-image: url('../img/hero/red-hero-bg-mob.png'),
     linear-gradient(to right, #1c1d20, #1c1d20);
 }
+
 .is-open {
   transform: translateX(0);
-
 }
+
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
