@@ -8,6 +8,7 @@ import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 import { onOpenHandle } from './utilits';
 
+// *** Accordion ***
 
 const accordion = new Accordion('.about-me__accord_list', {
   duration: 350,
@@ -26,6 +27,7 @@ setTimeout(() => {
   accordion.attachEvents();
 }, 1000);
 
+// *** Swiper-Slider ***
 
 const swiperAbout = new Swiper('.about-swiper-container', {
   slidesPerView: 'auto',
@@ -47,22 +49,43 @@ const swiperAbout = new Swiper('.about-swiper-container', {
   },
 });
 
-function updateActiveSlideColor() {
+updateActiveSlideColor();
+
+swiperAbout.on('slideChangeTransitionEnd', updateActiveSlideColor);
+
+export function updateActiveSlideColor() {
   document
     .querySelectorAll('#custom-swiper .about-swiper-skills')
     .forEach(slide => {
       slide.style.removeProperty('background-color');
     });
 
+  let currentColor;
+
+  try {
+    switch (JSON.parse(localStorage.getItem('currentTheme'))) {
+      case 'blue':
+        currentColor = '#0041e8';
+        break;
+
+      case 'yellow':
+        currentColor = '#c6e327';
+        break;
+
+      default:
+        currentColor = '#ed3b44';
+        break;
+    }
+  } catch (error) {
+    console.error(error);
+    currentColor = '#ed3b44';
+  }
+
   const activeSlide = document.querySelector(
     '#custom-swiper .about-swiper-skills.swiper-slide-active'
   );
   if (activeSlide) {
-    const selectedColor = '#ed3b44';
+    const selectedColor = currentColor;
     activeSlide.style.setProperty('background-color', selectedColor);
   }
 }
-
-updateActiveSlideColor();
-
-swiperAbout.on('slideChangeTransitionEnd', updateActiveSlideColor);
