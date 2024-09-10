@@ -332,6 +332,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 99999;
+
+  visibility: hidden;
 }
 
 .is-open {
