@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/project-team-10/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-team-10/assets/vendor-B_oXekBl.js">
     <link rel="stylesheet" crossorigin href="/project-team-10/assets/vendor-Cxpvzc90.css">
-    <link rel="stylesheet" crossorigin href="/project-team-10/assets/index-Qm39kYa8.css">
+    <link rel="stylesheet" crossorigin href="/project-team-10/assets/index-DrUJep3I.css">
   </head>
   <body>
     <!-- Header -->
@@ -79,7 +79,7 @@
           </li>
         </ul>
       </div>
-      <div>
+      <div class="header-btns-wrapper">
         <a
           href="#work-together"
           aria-label="work-together-link"
@@ -93,76 +93,90 @@
         type="button"
       >
         <svg class="header-btn-open" width="28" height="28">
-
           <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-burger"></use>
-
         </svg>
       </button>
+      <div class="theme-picker_container" tabindex="1">
+        <button
+          type="button"
+          class="theme-picker_red"
+          data-color="red"
+        ></button>
+        <button
+          type="button"
+          class="theme-picker_blue"
+          data-color="blue"
+        ></button>
+        <button
+          type="button"
+          class="theme-picker_yellow"
+          data-color="yellow"
+        ></button>
+      </div>
     </div>
     <button id="scrollToTopBtn" class="scroll-to-top">
       <svg class="scrol-to-up-img" width="30" height="30">
-
         <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-arrow-arrow-left"></use>
-
       </svg>
     </button>
   </div>
 </header>
 <!--========Mobile menu=======-->
 
-
-<div class="mob-wrap js-menu-container" id="mobile-menu">
-  <button
-    class="mob-btn-close js-close-menu"
-    aria-label="button-menu-close"
-    type="button"
-  >
-    <svg class="btn-close" width="28" height="28">
-      <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-close-mob-menu-bt"></use>
-    </svg>
-  </button>
-  <nav class="mob-menu">
-    <ul class="mob-list">
-      <li class="mob-item">
-        <a
-          href="#about-me"
-          aria-label="about-me-section-link"
-          class="mob-link js-header-link"
-          >About me</a
-        >
-      </li>
-      <li class="mob-item">
-        <a
-          href="#benefits-section"
-          aria-label="benefits-section-link"
-          class="mob-link js-header-link"
-          >Benefits</a
-        >
-      </li>
-      <li class="mob-item">
-        <a
-          href="#projects-section"
-          aria-label="projects-section-link"
-          class="mob-link js-header-link"
-          >Projects</a
-        >
-      </li>
-      <li class="mob-item">
-        <a
-          href="#faq-section"
-          aria-label="faq-section-link"
-          class="mob-link js-header-link"
-          >FAQ</a
-        >
-      </li>
-    </ul>
-  </nav>
-  <a
-    href="#work-together"
-    aria-label="work-together-link"
-    class="modal-btn-order js-header-link"
-    >Order the project</a
-  >
+<div class="backdrop">
+  <div class="mob-wrap js-menu-container" id="mobile-menu">
+    <button
+      class="mob-btn-close js-close-menu"
+      aria-label="button-menu-close"
+      type="button"
+    >
+      <svg class="btn-close" width="28" height="28">
+        <use href="/project-team-10/assets/icon-BTOTQ9Pm.svg#icon-close-mob-menu-bt"></use>
+      </svg>
+    </button>
+    <nav class="mob-menu">
+      <ul class="mob-list">
+        <li class="mob-item">
+          <a
+            href="#about-me"
+            aria-label="about-me-section-link"
+            class="mob-link js-header-link"
+            >About me</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#benefits-section"
+            aria-label="benefits-section-link"
+            class="mob-link js-header-link"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#projects-section"
+            aria-label="projects-section-link"
+            class="mob-link js-header-link"
+            >Projects</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#faq-section"
+            aria-label="faq-section-link"
+            class="mob-link js-header-link"
+            >FAQ</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a
+      href="#work-together"
+      aria-label="work-together-link"
+      class="modal-btn-order js-header-link"
+      >Order the project</a
+    >
+  </div>
 </div>
 
 
