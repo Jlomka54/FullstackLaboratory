@@ -1,4 +1,3 @@
-
 .hero-section {
   max-width: 375px;
   margin: 0 auto;
@@ -20,6 +19,8 @@
 
 .hero-links-wrapper {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
@@ -63,12 +64,10 @@
 .hero-address__link:hover {
   outline: none;
   border-color: #fafafa;
-
 }
 
 /* TABLET */
 @media screen and (min-width: 768px) {
-
   .hero-section {
     max-width: 768px;
     padding-top: 300px;
@@ -98,13 +97,11 @@
 
   .hero-address__link {
     padding: 18px 24px;
-
   }
 }
 
 /* DESKTOP 1440 */
 @media screen and (min-width: 1440px) {
-
   .hero-section {
     max-width: 1440px;
     background-image: url('../img/hero/red-hero-bg-desk.png');
@@ -113,6 +110,5 @@
   .hero-title {
     margin: 0 auto 243px;
     max-width: 1084px;
-
   }
 }

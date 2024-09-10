@@ -8,13 +8,11 @@ import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 import { onOpenHandle } from './utilits';
 
-
 const accordion = new Accordion('.about-me__accord_list', {
   duration: 350,
   elementClass: 'about-me__accord_item',
   triggerClass: 'about-me__accord_trigger',
   panelClass: 'about-me__accord_panel',
-  showMultiple: true,
   onOpen: onOpenHandle,
 });
 
@@ -25,7 +23,6 @@ accordion.open(0);
 setTimeout(() => {
   accordion.attachEvents();
 }, 1000);
-
 
 const swiperAbout = new Swiper('.about-swiper-container', {
   slidesPerView: 'auto',
