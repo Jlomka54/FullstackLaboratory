@@ -1,0 +1,207 @@
+.benefit-svg {
+  fill: transparent;
+  stroke: #fafafa;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--basic-color-bt);
+  padding: 12px;
+  margin-bottom: 64px;
+}
+
+.benefit-title-one {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.benefits_2 {
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+.benefit-text-one {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.benefit-button {
+  display: inline-block;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 18px 36px;
+  background-color: transparent;
+  color: #fafafa;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.benefit-button:hover,
+.benefit-button:focus {
+  box-shadow: 0 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item {
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 344px;
+  height: 270px;
+  background-color: #242527;
+}
+
+.benefit-list {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .section-box {
+    padding: 48px 0;
+  }
+
+  .benefit-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .div2 {
+    width: calc(100% / 2);
+  }
+
+  .benefit-item {
+    max-width: 332px;
+  }
+
+  .benefits_2 {
+    margin: 0;
+  }
+
+  .benefit-title {
+    display: flex;
+  }
+
+  .container {
+    max-width: 1440px;
+  }
+
+  .section-box {
+    padding: 82px 0;
+  }
+}
+
+.benefit-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.benefit-button:active {
+  color: #000;
+}
+
+.benefit-button:active:after {
+  background: transparent;
+}
+
+.benefit-button:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 60px;
+}
+
+.benefit-button:hover {
+  border-color: #ed3b44;
+  background-color: #ed3b44;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-button {
+  padding: 18px 36px;
+
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 60px;
+}
+
+.benefit-button:active {
+  color: #000;
+}
+
+.benefit-button:active:after {
+  background: transparent;
+}
+
+.benefit-button:hover:before {
+  opacity: 1;
+}
+
+.benefit-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  border-radius: 60px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

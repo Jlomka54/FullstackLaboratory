@@ -1,7 +1,7 @@
 'use strict';
 
 import axios, { AxiosError } from 'axios';
-// import iziToast from 'izitoast';
+import { invokeToast } from './utilits';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import svgSprite from '../img/icon.svg';
@@ -11,13 +11,6 @@ const formData = { client_email: '', client_comment: '' };
 const form = document.querySelector('.wt-form');
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
-export const TOAST_CONFIG = {
-  titleSize: "16px",
-  maxWidth: 432,
-  position: "topRight",
-  closeOnEscape: true,
-  theme: "dark",
-};
 
 const postClientData = async formData => {
   const params = {
@@ -64,12 +57,12 @@ const createModal = data => {
   );
 };
 
-const wtInputCallback = (e) => {
+const wtInputCallback = e => {
   formData[e.target.name] = e.target.value.trim();
   localStorage.setItem('wt-form-data', JSON.stringify(formData));
 };
 
-const wtSubmitCallback = async (e) => {
+const wtSubmitCallback = async e => {
   e.preventDefault();
 
   if (formData.client_email === '' || formData.client_comment === '') {
@@ -82,18 +75,19 @@ const wtSubmitCallback = async (e) => {
     modal.show();
   } catch (error) {
     if (error instanceof AxiosError) {
-      console.error("Axios Error:", error.message);
-      console.error("Error Details:", error.config);
-      // iziToast.error({
-      //   ...TOAST_CONFIG,
-      //   message: `Sorry, error occurred: ${error.message}. Please try again!`,
-      // });
+      console.error('Axios Error:', error.message);
+      console.error('Error Details:', error.config);
+      invokeToast(
+        'error',
+        `Sorry, error occurred: ${error.message}. Please try again!`
+      );
     } else {
+      console.error('Toast trigger');
       console.error(error);
-      // iziToast.error({
-        // ...TOAST_CONFIG,
-        // message: "Sorry, unexpected error occurred. Please try again!",
-      // });
+      invokeToast(
+        'error',
+        'Sorry, unexpected error occurred. Please try again!'
+      );
     }
     return;
   }

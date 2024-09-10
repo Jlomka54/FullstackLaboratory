@@ -1,0 +1,163 @@
+<header id="header" class="header">
+  <div class="header-box">
+    <div class="header-wrap">
+      <div class="header-logo">
+        <a href="./index.html">
+          <img
+            class="header-logo-image"
+            srcset="
+              ./img/header/developer.png   1x,
+              ./img/header/developer2x.png 2x
+            "
+            src="./img/header/developer.png 1x"
+            alt="Lloyd Jefferson"
+            loading="lazy"
+            width="80"
+            height="80"
+          />
+        </a>
+
+        <a href="./index.html" class="header-logo-text">jefferson&#42;</a>
+      </div>
+      <div class="header-dropdown">
+        <button
+          class="js-dropdown-toggle dropdown-toggle"
+          aria-label="drop-menu-btn"
+          type="button"
+        >
+          Menu
+        </button>
+        <ul class="js-dropdown-menu dropdown-menu">
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#about-me"
+              aria-label="about-me-section-link"
+              >About me</a
+            >
+          </li>
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#benefits-section"
+              aria-label="benefits-section-link"
+              >Benefits</a
+            >
+          </li>
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#projects-section"
+              aria-label="projects-section-link"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="js-header-menu-link header-menu-link"
+              href="#faq-section"
+              aria-label="faq-section-link"
+              >FAQ</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="header-btns-wrapper">
+        <a
+          href="#work-together"
+          aria-label="work-together-link"
+          class="header-order-btn"
+          >Order the project</a
+        >
+      </div>
+      <button
+        class="header-btn js-open-menu"
+        aria-label="button-menu-open"
+        type="button"
+      >
+        <svg class="header-btn-open" width="28" height="28">
+          <use href="/img/icon.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <div class="theme-picker_container" tabindex="1">
+        <button
+          type="button"
+          class="theme-picker_red"
+          data-color="red"
+        ></button>
+        <button
+          type="button"
+          class="theme-picker_blue"
+          data-color="blue"
+        ></button>
+        <button
+          type="button"
+          class="theme-picker_yellow"
+          data-color="yellow"
+        ></button>
+      </div>
+    </div>
+    <button id="scrollToTopBtn" class="scroll-to-top">
+      <svg class="scrol-to-up-img" width="30" height="30">
+        <use href="/img/icon.svg#icon-arrow-arrow-left"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+<!--========Mobile menu=======-->
+
+<div class="backdrop">
+  <div class="mob-wrap js-menu-container" id="mobile-menu">
+    <button
+      class="mob-btn-close js-close-menu"
+      aria-label="button-menu-close"
+      type="button"
+    >
+      <svg class="btn-close" width="28" height="28">
+        <use href="./img/icon.svg#icon-close-mob-menu-bt"></use>
+      </svg>
+    </button>
+    <nav class="mob-menu">
+      <ul class="mob-list">
+        <li class="mob-item">
+          <a
+            href="#about-me"
+            aria-label="about-me-section-link"
+            class="mob-link js-header-link"
+            >About me</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#benefits-section"
+            aria-label="benefits-section-link"
+            class="mob-link js-header-link"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#projects-section"
+            aria-label="projects-section-link"
+            class="mob-link js-header-link"
+            >Projects</a
+          >
+        </li>
+        <li class="mob-item">
+          <a
+            href="#faq-section"
+            aria-label="faq-section-link"
+            class="mob-link js-header-link"
+            >FAQ</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a
+      href="#work-together"
+      aria-label="work-together-link"
+      class="modal-btn-order js-header-link"
+      >Order the project</a
+    >
+  </div>
+</div>

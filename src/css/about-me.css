@@ -1,3 +1,7 @@
+/* ===============
+About-Me Section
+================ */
+
 .about-me__preview {
   margin-bottom: 32px;
 }
@@ -64,6 +68,10 @@
     margin-bottom: 96px;
   }
 }
+
+/* ===============
+About-Me Accordion
+================ */
 
 .about-me__accord_item {
   padding-bottom: 32px;
@@ -157,5 +165,99 @@
 
   .about-me__accord_text {
     max-width: 612px;
+  }
+}
+
+/* ===============
+About-Me Swiper
+================ */
+
+#custom-swiper {
+  display: flex;
+
+  align-items: center;
+  gap: 55px;
+
+  margin: 32px auto 0 auto;
+  max-width: 345px;
+}
+
+#custom-swiper .about-swiper-skills {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  transition: opacity 0.5s ease-in-out;
+  flex-basis: 130px;
+}
+
+.swiper-list {
+  max-width: 260px;
+}
+
+.about-swiper-skills.active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.about-button-swip {
+  z-index: 10;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.about-svg-swip {
+  fill: transparent;
+  stroke: var(--bg-arrows);
+  transition: var(--primary-transition);
+
+  &:hover {
+    stroke: var(--bg-arrows-hover);
+  }
+}
+
+.about-swiper-container li {
+  margin-right: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+  #custom-swiper {
+    gap: 64px;
+    max-width: 700px;
+  }
+
+  #custom-swiper .about-swiper-skills {
+    width: 200px;
+    height: 200px;
+    flex-basis: 200px;
+  }
+
+  .about-button-swip {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-list {
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #custom-swiper {
+    gap: 72px;
+    max-width: 1312px;
+  }
+
+  .swiper-list {
+    max-width: 1200px;
   }
 }

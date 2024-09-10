@@ -151,7 +151,7 @@
 
 .wt-btn:hover,
 .wt-btn:focus {
-  background-color: #e0373f;
+  background-color: var(--basic-hovered-color-btn);
   border: none;
 }
 
@@ -204,7 +204,6 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--primary-text-hex);
-  padding: 10px 12px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   transition: border-color var(--primary-transition);
@@ -213,6 +212,11 @@
 .wt-contacts-item:hover,
 .wt-contacts-item:focus {
   border-color: var(--primary-text-hex);
+}
+
+.wt-contacts-link {
+  display: block;
+  padding: 10px 12px;
 }
 
 /* MODAL */
