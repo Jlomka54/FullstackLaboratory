@@ -9,15 +9,15 @@
 }
 
 body[data-theme='red'] .hero-section {
-  background-image: url('../img/hero/red-hero-bg-mob.png');
+  background-image: url('../img/hero/red-hero-bg-mob.webp');
 }
 
 body[data-theme='blue'] .hero-section {
-  background-image: url('../img/hero/blue-hero-bg-mob.png');
+  background-image: url('../img/hero/blue-hero-bg-mob.webp');
 }
 
 body[data-theme='yellow'] .hero-section {
-  background-image: url('../img/hero/yellow-hero-bg-mob.png');
+  background-image: url('../img/hero/yellow-hero-bg-mob.webp');
 }
 
 .hero-title {
@@ -86,15 +86,15 @@ body[data-theme='yellow'] .hero-section {
   }
 
   body[data-theme='red'] .hero-section {
-    background-image: url('../img/hero/red-hero-bg-tab.png');
+    background-image: url('../img/hero/red-hero-bg-tab.webp');
   }
 
   body[data-theme='blue'] .hero-section {
-    background-image: url('../img/hero/blue-hero-bg-tab.png');
+    background-image: url('../img/hero/blue-hero-bg-tab.webp');
   }
 
   body[data-theme='yellow'] .hero-section {
-    background-image: url('../img/hero/yellow-hero-bg-tab.png');
+    background-image: url('../img/hero/yellow-hero-bg-tab.webp');
   }
 
   .hero-title {
@@ -130,15 +130,15 @@ body[data-theme='yellow'] .hero-section {
   }
 
   body[data-theme='red'] .hero-section {
-    background-image: url('../img/hero/red-hero-bg-desk.png');
+    background-image: url('../img/hero/red-hero-bg-desk.webp');
   }
 
   body[data-theme='blue'] .hero-section {
-    background-image: url('../img/hero/blue-hero-bg-desk.png');
+    background-image: url('../img/hero/blue-hero-bg-desk.webp');
   }
 
   body[data-theme='yellow'] .hero-section {
-    background-image: url('../img/hero/yellow-hero-bg-desk.png');
+    background-image: url('../img/hero/yellow-hero-bg-desk.webp');
   }
 
   .hero-title {
@@ -154,42 +154,42 @@ Hero min-dpi MediaQ
 
 @media screen and (min-resolution: 192dpi) {
   body[data-theme='red'] .hero-section {
-    background-image: url('../img/hero/red-hero-bg-mob@2x.png');
+    background-image: url('../img/hero/red-hero-bg-mob@2x.webp');
   }
 
   body[data-theme='blue'] .hero-section {
-    background-image: url('../img/hero/blue-hero-bg-mob@2x.png');
+    background-image: url('../img/hero/blue-hero-bg-mob@2x.webp');
   }
 
   body[data-theme='yellow'] .hero-section {
-    background-image: url('../img/hero/yellow-hero-bg-mob@2x.png');
+    background-image: url('../img/hero/yellow-hero-bg-mob@2x.webp');
   }
 
   @media screen and (min-width: 768px) {
     body[data-theme='red'] .hero-section {
-      background-image: url('../img/hero/red-hero-bg-tab@2x.png');
+      background-image: url('../img/hero/red-hero-bg-tab@2x.webp');
     }
 
     body[data-theme='blue'] .hero-section {
-      background-image: url('../img/hero/blue-hero-bg-tab@2x.png');
+      background-image: url('../img/hero/blue-hero-bg-tab@2x.webp');
     }
 
     body[data-theme='yellow'] .hero-section {
-      background-image: url('../img/hero/yellow-hero-bg-tab@2x.png');
+      background-image: url('../img/hero/yellow-hero-bg-tab@2x.webp');
     }
   }
 
   @media screen and (min-width: 1440px) {
     body[data-theme='red'] .hero-section {
-      background-image: url('../img/hero/red-hero-bg-desk@2x.png');
+      background-image: url('../img/hero/red-hero-bg-desk@2x.webp');
     }
 
     body[data-theme='blue'] .hero-section {
-      background-image: url('../img/hero/blue-hero-bg-desk@2x.png');
+      background-image: url('../img/hero/blue-hero-bg-desk@2x.webp');
     }
 
     body[data-theme='yellow'] .hero-section {
-      background-image: url('../img/hero/yellow-hero-bg-desk@2x.png');
+      background-image: url('../img/hero/yellow-hero-bg-desk@2x.webp');
     }
 
   }

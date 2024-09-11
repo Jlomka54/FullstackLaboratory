@@ -367,17 +367,17 @@
 }
 
 body[data-theme='red'] .mob-wrap {
-  background-image: url('../img/hero/red-hero-bg-mob.png'),
+  background-image: url('../img/hero/red-hero-bg-mob.webp'),
     linear-gradient(to right, #1c1d20, #1c1d20);
 }
 
 body[data-theme='blue'] .mob-wrap {
-  background-image: url('../img/hero/blue-hero-bg-mob.png'),
+  background-image: url('../img/hero/blue-hero-bg-mob.webp'),
     linear-gradient(to right, #1c1d20, #1c1d20);
 }
 
 body[data-theme='yellow'] .mob-wrap {
-  background-image: url('../img/hero/yellow-hero-bg-mob.png'),
+  background-image: url('../img/hero/yellow-hero-bg-mob.webp'),
     linear-gradient(to right, #1c1d20, #1c1d20);
 }
 
@@ -385,17 +385,17 @@ body[data-theme='yellow'] .mob-wrap {
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   body[data-theme='red'] .mob-wrap {
-    background-image: url('../img/hero/red-hero-bg-mob@2x.png'),
+    background-image: url('../img/hero/red-hero-bg-mob@2x.webp'),
       linear-gradient(to right, #1c1d20, #1c1d20);
   }
 
   body[data-theme='blue'] .mob-wrap {
-    background-image: url('../img/hero/blue-hero-bg-mob@2x.png'),
+    background-image: url('../img/hero/blue-hero-bg-mob@2x.webp'),
       linear-gradient(to right, #1c1d20, #1c1d20);
   }
 
   body[data-theme='yellow'] .mob-wrap {
-    background-image: url('../img/hero/yellow-hero-bg-mob@2x.png'),
+    background-image: url('../img/hero/yellow-hero-bg-mob@2x.webp'),
       linear-gradient(to right, #1c1d20, #1c1d20);
   }
 }
