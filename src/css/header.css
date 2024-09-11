@@ -331,7 +331,7 @@
   width: 100dvw;
   height: 100dvh;
   z-index: 99999;
-
+  overflow-y: hidden;
   visibility: hidden;
 }
 
