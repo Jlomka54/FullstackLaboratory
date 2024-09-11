@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector('.js-dropdown-toggle');
 const menuDropdown = document.querySelector('.js-dropdown-menu');
 const menuLink = document.querySelectorAll('.js-header-menu-link');
+const TRIGGER_HEIGHT = 100;
 
 menuToggle.addEventListener('click', function () {
   menuDropdown.classList.toggle('show');
@@ -18,13 +19,14 @@ window.addEventListener('click', function (e) {
   }
 });
 
-// modal
+// modal & scroll to top btn
 
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
   const closeMenuLink = document.querySelectorAll('.js-header-link');
+  const topScrollBtn = document.querySelector('.scroll-to-top');
 
   const toggleMenu = () => {
     const isMenuOpen = mobileMenu.classList.contains('is-open');
@@ -48,4 +50,25 @@ window.addEventListener('click', function (e) {
     openMenuBtn.setAttribute('aria-expanded', false);
     document.body.classList.remove('no-scroll');
   });
+
+  const scrollEvent = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const btnVanishing = () => {
+    const scrollYOffset = window.scrollY;
+
+    if (scrollYOffset > TRIGGER_HEIGHT) {
+      topScrollBtn.classList.add('up-btn-show');
+      topScrollBtn.addEventListener('click', scrollEvent);
+    } else {
+      topScrollBtn.classList.remove('up-btn-show');
+      topScrollBtn.removeEventListener('click', scrollEvent);
+    }
+  };
+
+  window.addEventListener('scroll', btnVanishing);
 })();

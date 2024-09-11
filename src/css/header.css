@@ -45,27 +45,23 @@
   right: 20px;
   opacity: 0;
   visibility: hidden;
-  background-color: #ed3b44;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--basic-color-bt);
   width: 55px;
   height: 55px;
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 0;
   border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
   z-index: 1000;
   transition: opacity 1s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-.scroll-to-top.up-btn-show {
+
+.up-btn-show {
   opacity: 1;
   visibility: visible;
 }
 
-.scrol-to-up-img {
+.scroll-to-top svg {
   transform: rotate(90deg);
   fill: transparent;
   stroke: #fafafa;
@@ -73,7 +69,7 @@
 
 .scroll-to-top:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  background-color: #e0373f;
+  background-color: var(--basic-hovered-color-btn);
 }
 
 .no-scroll {
