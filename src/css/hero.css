@@ -1,11 +1,23 @@
 .hero-section {
   max-width: 375px;
   margin: 0 auto;
-  background-image: url('../img/hero/red-hero-bg-mob.png');
   background-size: cover;
   background-repeat: no-repeat;
 
   padding: 281px 0px 32px;
+  transition: background-image var(--primary-transition);
+}
+
+body[data-theme='red'] .hero-section {
+  background-image: url('../img/hero/red-hero-bg-mob.png');
+}
+
+body[data-theme='blue'] .hero-section {
+  background-image: url('../img/hero/blue-hero-bg-mob.png');
+}
+
+body[data-theme='yellow'] .hero-section {
+  background-image: url('../img/hero/yellow-hero-bg-mob.png');
 }
 
 .hero-title {
@@ -71,7 +83,18 @@
   .hero-section {
     max-width: 768px;
     padding-top: 300px;
+  }
+
+  body[data-theme='red'] .hero-section {
     background-image: url('../img/hero/red-hero-bg-tab.png');
+  }
+
+  body[data-theme='blue'] .hero-section {
+    background-image: url('../img/hero/blue-hero-bg-tab.png');
+  }
+
+  body[data-theme='yellow'] .hero-section {
+    background-image: url('../img/hero/yellow-hero-bg-tab.png');
   }
 
   .hero-title {
@@ -104,11 +127,70 @@
 @media screen and (min-width: 1440px) {
   .hero-section {
     max-width: 1440px;
+  }
+
+  body[data-theme='red'] .hero-section {
     background-image: url('../img/hero/red-hero-bg-desk.png');
+  }
+
+  body[data-theme='blue'] .hero-section {
+    background-image: url('../img/hero/blue-hero-bg-desk.png');
+  }
+
+  body[data-theme='yellow'] .hero-section {
+    background-image: url('../img/hero/yellow-hero-bg-desk.png');
   }
 
   .hero-title {
     margin: 0 auto 243px;
     max-width: 1084px;
+
+  }
+}
+
+/* =================
+Hero min-dpi MediaQ
+================= */
+
+@media screen and (min-resolution: 192dpi) {
+  body[data-theme='red'] .hero-section {
+    background-image: url('../img/hero/red-hero-bg-mob@2x.png');
+  }
+
+  body[data-theme='blue'] .hero-section {
+    background-image: url('../img/hero/blue-hero-bg-mob@2x.png');
+  }
+
+  body[data-theme='yellow'] .hero-section {
+    background-image: url('../img/hero/yellow-hero-bg-mob@2x.png');
+  }
+
+  @media screen and (min-width: 768px) {
+    body[data-theme='red'] .hero-section {
+      background-image: url('../img/hero/red-hero-bg-tab@2x.png');
+    }
+
+    body[data-theme='blue'] .hero-section {
+      background-image: url('../img/hero/blue-hero-bg-tab@2x.png');
+    }
+
+    body[data-theme='yellow'] .hero-section {
+      background-image: url('../img/hero/yellow-hero-bg-tab@2x.png');
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    body[data-theme='red'] .hero-section {
+      background-image: url('../img/hero/red-hero-bg-desk@2x.png');
+    }
+
+    body[data-theme='blue'] .hero-section {
+      background-image: url('../img/hero/blue-hero-bg-desk@2x.png');
+    }
+
+    body[data-theme='yellow'] .hero-section {
+      background-image: url('../img/hero/yellow-hero-bg-desk@2x.png');
+    }
+
   }
 }

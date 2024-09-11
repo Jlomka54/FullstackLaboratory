@@ -10,16 +10,19 @@
 
   body[data-theme='red'] {
     --basic-color-bt: #ed3b44;
+    --basic-color-bt-rgba: 237, 59, 68;
     --basic-hovered-color-btn: #e0373f;
   }
 
   body[data-theme='blue'] {
     --basic-color-bt: #0041e8;
+    --basic-color-bt-rgba: 0, 65, 232;
     --basic-hovered-color-btn: #003ddb;
   }
 
   body[data-theme='yellow'] {
     --basic-color-bt: #c6e327;
+    --basic-color-bt-rgba: 198, 227, 39;
     --basic-hovered-color-btn: #c0d623;
   }
 }
