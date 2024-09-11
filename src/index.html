@@ -11,15 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preload" href="./css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/critical.css"></noscript>
   </head>
   <body>
     <!-- Header -->
     <load src="./partials/header.html" />
-
+    
     <main>
       <!-- Hero -->
       <load src="./partials/hero.html" />
+
+      <!-- Non Critical Styles -->
+      <link rel="stylesheet" href="./css/styles.css" media="print" onload="this.media='all'" />
+      <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
 
       <!-- About-Me -->
       <load src="./partials/about-me.html" />
