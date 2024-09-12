@@ -386,6 +386,7 @@ body[data-theme='yellow'] .mob-wrap {
 
 .mob-list {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 20px;
