@@ -4,7 +4,6 @@
   margin-top: 64px;
 }
 
- 
 .projects-title {
   font-weight: 600;
   font-size: 16px;
@@ -65,9 +64,10 @@
 }
 
 .project-btn {
-  text-align: center;
- }  
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .projects-img-block {
   display: flex;
@@ -220,8 +220,6 @@ svg.swiper-button-icon.icon-right {
     letter-spacing: -1.32px;
     margin-bottom: 32px;
   }
-
-
 
   .swiper-slide {
     display: flex;
