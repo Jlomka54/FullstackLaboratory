@@ -1,0 +1,50 @@
+.header-box {
+  margin: 0 auto;
+  max-width: 375px;
+  position: relative;
+}
+.header-wrap {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 32px 16px 0px 16px;
+}
+
+.header-logo {
+  display: flex;
+  gap: 8px;
+}
+
+.header-logo-text {
+  font-weight: 500;
+  color: #fafafa;
+  letter-spacing: -0.02em;
+}
+
+.header-dropdown {
+  display: none;
+}
+
+.header-order-btn {
+  display: none;
+}
+
+.header-btn {
+  border: none;
+  display: flex;
+  background-color: transparent;
+  stroke: #fafafa;
+}
+
+.hero-section {
+  max-width: 375px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 281px 0px 32px;
+  transition: background-image 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
