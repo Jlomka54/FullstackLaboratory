@@ -1,11 +1,11 @@
 {
-  "name": "project-team-10",
+  "name": "FullstackLaboratory",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-team-10/",
+    "build": "vite build --base=/FullstackLaboratory/",
     "preview": "vite preview"
   },
   "devDependencies": {
