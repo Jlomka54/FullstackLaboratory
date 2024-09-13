@@ -15,7 +15,7 @@ function updateThemeColor(event) {
   const pickedColor = event.target.dataset.color;
 
   document.body.dataset.theme = pickedColor;
-  updateActiveSlideColor();
 
   localStorage.setItem('currentTheme', JSON.stringify(pickedColor));
+  updateActiveSlideColor();
 }
