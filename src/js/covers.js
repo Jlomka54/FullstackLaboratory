@@ -6,7 +6,7 @@ const additionalLine = targetElement.querySelector('.additional-line');
 
 const options = {
   rootMargin: '0px',
-  threshold: 0,
+  threshold: 0.2,
 };
 
 const observerCallback = entries => {
