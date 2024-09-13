@@ -3,14 +3,11 @@ import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
 import 'swiper/css';
-
 import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
 
 import { onOpenHandle } from './utilits';
 
-
 // *** Accordion ***
-
 
 const accordion = new Accordion('.about-me__accord_list', {
   duration: 350,
@@ -27,7 +24,6 @@ accordion.open(0);
 setTimeout(() => {
   accordion.attachEvents();
 }, 1000);
-
 
 // *** Swiper-Slider ***
 
@@ -68,6 +64,10 @@ export function updateActiveSlideColor() {
     switch (JSON.parse(localStorage.getItem('currentTheme'))) {
       case 'blue':
         currentColor = '#0041e8';
+        break;
+
+      case 'green':
+        currentColor = '#2b4441';
         break;
 
       case 'yellow':
