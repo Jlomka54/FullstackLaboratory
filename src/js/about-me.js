@@ -66,6 +66,10 @@ export function updateActiveSlideColor() {
         currentColor = '#0041e8';
         break;
 
+      case 'green':
+        currentColor = '#2b4441';
+        break;
+
       case 'yellow':
         currentColor = '#c6e327';
         break;

@@ -20,6 +20,12 @@
     --basic-hovered-color-btn: #003ddb;
   }
 
+  body[data-theme='green'] {
+    --basic-color-bt: #2b4441;
+    --basic-color-bt-rgba: 47, 75, 69;
+    --basic-hovered-color-btn: #273f3c;
+  }
+
   body[data-theme='yellow'] {
     --basic-color-bt: #c6e327;
     --basic-color-bt-rgba: 198, 227, 39;
